@@ -26,7 +26,11 @@ const Hero = () => {
     { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/1920px-Salesforce.com_logo.svg.png" }
   ];
 
-  const plugin = Autoplay({ delay: 2000, stopOnInteraction: false });
+  const plugin = Autoplay({ 
+    delay: 3000, // Increased delay for smoother transitions
+    stopOnInteraction: false,
+    stopOnMouseEnter: false, // Prevents stopping on mouse hover
+  });
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
@@ -37,6 +41,7 @@ const Hero = () => {
           backgroundSize: "cover"
         }} />
       </div>
+
       <div className="container mx-auto px-6 relative z-10">
         <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <p className="text-white/80 text-lg md:text-xl mb-4 tracking-wide">
@@ -62,17 +67,18 @@ const Hero = () => {
               opts={{
                 align: "center",
                 loop: true,
-                skipSnaps: true,
+                skipSnaps: false,
                 dragFree: true,
                 containScroll: false,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
+                duration: 50,
               }}
               plugins={[plugin]}
               className="w-full max-w-5xl mx-auto"
             >
               <CarouselContent>
                 {clientLogos.map((client, index) => (
-                  <CarouselItem key={index} className="basis-1/5 md:basis-1/5">
+                  <CarouselItem key={index} className="basis-1/6 md:basis-1/6">
                     <div className="p-4">
                       <img
                         src={client.logo}
