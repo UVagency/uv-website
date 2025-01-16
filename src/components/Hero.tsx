@@ -27,13 +27,13 @@ const Hero = () => {
   ];
 
   const plugin = Autoplay({ 
-    delay: 3000, // Increased delay for smoother transitions
+    delay: 3000,
     stopOnInteraction: false,
-    stopOnMouseEnter: false, // Prevents stopping on mouse hover
+    stopOnMouseEnter: false,
   });
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+    <section className="min-h-screen pt-48 flex items-center justify-center relative overflow-hidden bg-black">
       {/* Polygon Background Effect */}
       <div className="absolute inset-0 opacity-50">
         <div className="w-full h-full" style={{
