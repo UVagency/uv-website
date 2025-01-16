@@ -8,27 +8,41 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-900 via-cyan-800 to-teal-400">
+      {/* Polygon Background Effect */}
+      <div className="absolute inset-0 opacity-50">
+        <div className="w-full h-full" style={{
+          backgroundImage: "url('data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='pattern' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='scale(2)'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z' fill='%23000' fill-opacity='0.1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23pattern)'/%3E%3C/svg%3E')",
+          backgroundSize: "cover"
+        }} />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            We Create Digital Experiences
+          <p className="text-white/80 text-lg md:text-xl mb-4 tracking-wide">
+            WE'RE UNITED VISIONS
+          </p>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white">
+            The integrated<br />marketing agency
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8">
-            A digital agency focused on crafting unique and engaging web solutions
+          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto">
+            We partner with businesses to boost growth by blending creation, media, and phygital experiences for real results
           </p>
           <a 
-            href="#contact"
-            className="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-900 transition-colors"
+            href="#work"
+            className="inline-block bg-white text-black px-8 py-4 rounded-full hover:bg-gray-100 transition-colors text-lg font-medium"
           >
-            Get in Touch
+            Curated work
           </a>
+
+          {/* Clients Section */}
+          <div className="mt-24">
+            <p className="text-white/60 mb-8">We've proudly worked with</p>
+            <div className="flex flex-wrap justify-center items-center gap-12">
+              <img src="/lovable-uploads/6cbb6cd8-603d-460c-8ac7-8285e55a5f14.png" alt="Client Logos" className="max-w-full h-auto opacity-80" />
+            </div>
+          </div>
         </div>
-      </div>
-      
-      {/* Background Animation */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100/50" />
       </div>
     </section>
   );
