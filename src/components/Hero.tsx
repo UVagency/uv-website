@@ -19,6 +19,11 @@ const Hero = () => {
     { name: "Apple", logo: "https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg" },
     { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
     { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" },
+    { name: "Netflix", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" },
+    { name: "Tesla", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/1920px-Tesla_Motors.svg.png" },
+    { name: "Intel", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Intel_logo_%282006-2020%29.svg/1920px-Intel_logo_%282006-2020%29.svg.png" },
+    { name: "Adobe", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Adobe_Corporate_Logo.png/1920px-Adobe_Corporate_Logo.png" },
+    { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/1920px-Salesforce.com_logo.svg.png" }
   ];
 
   const plugin = Autoplay({ delay: 2000, stopOnInteraction: false });
@@ -32,9 +37,8 @@ const Hero = () => {
           backgroundSize: "cover"
         }} />
       </div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+    <div className="container mx-auto px-6 relative z-10">
+      <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <p className="text-white/80 text-lg md:text-xl mb-4 tracking-wide">
             WE'RE UNITED VISIONS
           </p>
@@ -51,37 +55,37 @@ const Hero = () => {
             Curated work
           </a>
 
-          {/* Client Logos Carousel */}
-          <div className="mt-20">
-            <p className="text-white/60 text-sm uppercase tracking-wider mb-8">Trusted by leading brands worldwide</p>
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-                dragFree: true,
-                containScroll: "trimSnaps",
-              }}
-              plugins={[plugin]}
-              className="w-full max-w-5xl mx-auto"
-            >
-              <CarouselContent>
-                {clientLogos.map((client, index) => (
-                  <CarouselItem key={index} className="basis-1/5 md:basis-1/5">
-                    <div className="p-4">
-                      <img
-                        src={client.logo}
-                        alt={`${client.name} logo`}
-                        className="h-8 w-auto mx-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-          </div>
+        {/* Client Logos Carousel */}
+        <div className="mt-20">
+          <p className="text-white/60 text-sm uppercase tracking-wider mb-8">Trusted by leading brands worldwide</p>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: true,
+              containScroll: "trimSnaps",
+            }}
+            plugins={[plugin]}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent>
+              {clientLogos.map((client, index) => (
+                <CarouselItem key={index} className="basis-1/5 md:basis-1/5">
+                  <div className="p-4">
+                    <img
+                      src={client.logo}
+                      alt={`${client.name} logo`}
+                      className="h-8 w-auto mx-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 
