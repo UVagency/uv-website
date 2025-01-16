@@ -28,9 +28,8 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
-            <a href="#services" className="hover:text-gray-600 transition-colors">Services</a>
             <a href="#work" className="hover:text-gray-600 transition-colors">Work</a>
+            <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
             <a href="#contact" className="hover:text-gray-600 transition-colors">Contact</a>
           </div>
 
@@ -47,9 +46,8 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-md">
             <div className="flex flex-col space-y-4 p-6">
-              <a href="#about" className="hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>About</a>
-              <a href="#services" className="hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>Services</a>
               <a href="#work" className="hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>Work</a>
+              <a href="#about" className="hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>About</a>
               <a href="#contact" className="hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
             </div>
           </div>
