@@ -37,8 +37,8 @@ const Hero = () => {
           backgroundSize: "cover"
         }} />
       </div>
-    <div className="container mx-auto px-6 relative z-10">
-      <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <p className="text-white/80 text-lg md:text-xl mb-4 tracking-wide">
             WE'RE UNITED VISIONS
           </p>
@@ -55,37 +55,39 @@ const Hero = () => {
             Curated work
           </a>
 
-        {/* Client Logos Carousel */}
-        <div className="mt-20">
-          <p className="text-white/60 text-sm uppercase tracking-wider mb-8">Trusted by leading brands worldwide</p>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-              dragFree: true,
-              containScroll: "trimSnaps",
-            }}
-            plugins={[plugin]}
-            className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent>
-              {clientLogos.map((client, index) => (
-                <CarouselItem key={index} className="basis-1/5 md:basis-1/5">
-                  <div className="p-4">
-                    <img
-                      src={client.logo}
-                      alt={`${client.name} logo`}
-                      className="h-8 w-auto mx-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+          {/* Client Logos Carousel */}
+          <div className="mt-20">
+            <p className="text-white/60 text-sm uppercase tracking-wider mb-8">Trusted by leading brands worldwide</p>
+            <Carousel
+              opts={{
+                align: "center",
+                loop: true,
+                skipSnaps: true,
+                dragFree: true,
+                containScroll: false,
+                slidesToScroll: 1,
+              }}
+              plugins={[plugin]}
+              className="w-full max-w-5xl mx-auto"
+            >
+              <CarouselContent>
+                {clientLogos.map((client, index) => (
+                  <CarouselItem key={index} className="basis-1/5 md:basis-1/5">
+                    <div className="p-4">
+                      <img
+                        src={client.logo}
+                        alt={`${client.name} logo`}
+                        className="h-8 w-auto mx-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 
