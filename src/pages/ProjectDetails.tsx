@@ -8,7 +8,7 @@ const projectData = {
   id: "sabor-de-barrio",
   title: "Bridging Bonds with Sabor de Barrio: A CSR Success Story",
   client: "Chancaca Deliciosa",
-  image: "/lovable-uploads/6cbb6cd8-603d-460c-8ac7-8285e55a5f14.png",
+  videoId: "yBkIRTwXNP4",
   overview: "A corporate social responsibility campaign that strengthened the connection between Chancaca Deliciosa and the Chilean community by celebrating the traditional dish 'sopaipillas pasadas.'",
   strategy: [
     "Collaborated with local municipality for best recipe contest",
@@ -64,11 +64,18 @@ const ProjectDetails = () => {
           <h1 className="text-4xl font-bold mb-6">{projectData.title}</h1>
           <p className="text-xl text-gray-600 mb-8">{projectData.client}</p>
 
-          <img 
-            src={projectData.image} 
-            alt={projectData.title}
-            className="w-full h-[400px] object-cover rounded-lg mb-12"
-          />
+          <div className="w-full aspect-video mb-12 rounded-lg overflow-hidden">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${projectData.videoId}`}
+              title={projectData.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
 
           <div className="grid gap-8">
             <Card>
