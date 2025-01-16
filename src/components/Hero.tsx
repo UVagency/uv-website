@@ -34,14 +34,6 @@ const Hero = () => {
           >
             Curated work
           </a>
-
-          {/* Clients Section */}
-          <div className="mt-24">
-            <p className="text-white/60 mb-8">We've proudly worked with</p>
-            <div className="flex flex-wrap justify-center items-center gap-12">
-              <img src="/lovable-uploads/6cbb6cd8-603d-460c-8ac7-8285e55a5f14.png" alt="Client Logos" className="max-w-full h-auto opacity-80" />
-            </div>
-          </div>
         </div>
       </div>
     </section>
