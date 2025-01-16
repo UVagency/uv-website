@@ -57,8 +57,6 @@ const Hero = () => {
                 loop: true,
                 dragFree: true,
                 containScroll: "trimSnaps",
-                autoplay: true,
-                duration: 20000,
               }}
               className="w-full max-w-5xl mx-auto"
             >
