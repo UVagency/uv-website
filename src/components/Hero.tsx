@@ -8,11 +8,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-900 via-cyan-800 to-teal-400">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
       {/* Polygon Background Effect */}
       <div className="absolute inset-0 opacity-50">
         <div className="w-full h-full" style={{
-          backgroundImage: "url('data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='pattern' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='scale(2)'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z' fill='%23000' fill-opacity='0.1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23pattern)'/%3E%3C/svg%3E')",
+          backgroundImage: "url('data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='pattern' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='scale(2)'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z' fill='%23fff' fill-opacity='0.1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23pattern)'/%3E%3C/svg%3E')",
           backgroundSize: "cover"
         }} />
       </div>
