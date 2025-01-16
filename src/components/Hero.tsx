@@ -1,4 +1,9 @@
 import { useEffect, useState } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);
@@ -6,6 +11,14 @@ const Hero = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const clientLogos = [
+    { name: "Google", logo: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png" },
+    { name: "Meta", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/512px-Meta_Platforms_Inc._logo.svg.png" },
+    { name: "Apple", logo: "https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg" },
+    { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
+    { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" },
+  ];
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
@@ -34,6 +47,32 @@ const Hero = () => {
           >
             Curated work
           </a>
+
+          {/* Client Logos Carousel */}
+          <div className="mt-20">
+            <p className="text-white/60 text-sm uppercase tracking-wider mb-8">Trusted by leading brands worldwide</p>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-5xl mx-auto"
+            >
+              <CarouselContent>
+                {clientLogos.map((client, index) => (
+                  <CarouselItem key={index} className="basis-1/5 md:basis-1/5">
+                    <div className="p-4">
+                      <img
+                        src={client.logo}
+                        alt={`${client.name} logo`}
+                        className="h-8 w-auto mx-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
       </div>
     </section>
