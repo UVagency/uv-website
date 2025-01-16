@@ -14,7 +14,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-black/90 backdrop-blur-md py-6 shadow-md' : 'bg-transparent py-8'
+      scrolled ? 'bg-black/90 backdrop-blur-md py-4 shadow-md' : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-center">
@@ -22,7 +22,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/3de03002-3246-4965-b7e8-9780a09a46af.png" 
               alt="UV.Agency Logo" 
-              className="h-20 w-auto transition-transform duration-300 hover:scale-105"
+              className="h-16 w-auto transition-transform duration-300 hover:scale-105"
             />
           </a>
         </div>
