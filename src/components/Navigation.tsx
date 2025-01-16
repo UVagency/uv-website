@@ -15,7 +15,9 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md py-4' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+      scrolled ? 'bg-white/90 backdrop-blur-md py-4 shadow-md' : 'bg-black/50 backdrop-blur-md py-6'
+    }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center">
@@ -28,14 +30,14 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#work" className="hover:text-gray-600 transition-colors">Work</a>
-            <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
-            <a href="#contact" className="hover:text-gray-600 transition-colors">Contact</a>
+            <a href="#work" className="text-white hover:text-gray-300 transition-colors">Work</a>
+            <a href="#about" className="text-white hover:text-gray-300 transition-colors">About</a>
+            <a href="#contact" className="text-white hover:text-gray-300 transition-colors">Contact</a>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden"
+            className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -44,11 +46,11 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-md">
+          <div className="md:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-md">
             <div className="flex flex-col space-y-4 p-6">
-              <a href="#work" className="hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>Work</a>
-              <a href="#about" className="hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>About</a>
-              <a href="#contact" className="hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
+              <a href="#work" className="text-white hover:text-gray-300 transition-colors" onClick={() => setIsOpen(false)}>Work</a>
+              <a href="#about" className="text-white hover:text-gray-300 transition-colors" onClick={() => setIsOpen(false)}>About</a>
+              <a href="#contact" className="text-white hover:text-gray-300 transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
             </div>
           </div>
         )}
