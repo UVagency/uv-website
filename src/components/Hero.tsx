@@ -4,6 +4,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Autoplay from 'embla-carousel-autoplay';
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);
@@ -19,6 +20,8 @@ const Hero = () => {
     { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
     { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" },
   ];
+
+  const plugin = Autoplay({ delay: 2000, stopOnInteraction: false });
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
@@ -58,6 +61,7 @@ const Hero = () => {
                 dragFree: true,
                 containScroll: "trimSnaps",
               }}
+              plugins={[plugin]}
               className="w-full max-w-5xl mx-auto"
             >
               <CarouselContent>
