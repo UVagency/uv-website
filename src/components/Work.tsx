@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
+
 const projects = [
   {
-    title: "Project One",
-    category: "Web Development",
-    image: "/placeholder.svg"
+    id: "sabor-de-barrio",
+    title: "Sabor de Barrio",
+    category: "CSR Campaign",
+    image: "/lovable-uploads/6cbb6cd8-603d-460c-8ac7-8285e55a5f14.png"
   },
   {
     title: "Project Two",
@@ -25,9 +28,10 @@ const Work = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div 
+              <Link 
                 key={index}
-                className="group relative aspect-square bg-gray-100 rounded-lg overflow-hidden hover-scale"
+                to={project.id ? `/projects/${project.id}` : "#"}
+                className="group relative aspect-square bg-gray-100 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
               >
                 <img 
                   src={project.image}
@@ -40,7 +44,7 @@ const Work = () => {
                     <p>{project.category}</p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
