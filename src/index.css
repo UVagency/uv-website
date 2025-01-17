@@ -78,8 +78,9 @@
 .geometric-shape {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.15;
-  background: linear-gradient(45deg, #ffffff, transparent);
+  opacity: 0.3;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
   animation: float 20s infinite;
 }
 
