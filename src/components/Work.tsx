@@ -41,13 +41,21 @@ const Work = () => {
               <Link 
                 key={index}
                 to={project.id ? `/projects/${project.id}` : "#"}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover-scale"
+                className="group bg-white rounded-[20px] overflow-hidden transition-all duration-300 hover-scale"
+                style={{
+                  border: '1px solid rgba(0, 0, 0, 0.08)',
+                  boxShadow: 'rgba(0, 0, 0, 0.25) 0px 10px 30px -20px'
+                }}
               >
                 <div className="relative aspect-[4/3]">
                   <img 
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
+                    style={{
+                      opacity: 1,
+                      borderRadius: '20px'
+                    }}
                   />
                 </div>
                 <div className="p-8">
