@@ -20,9 +20,22 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Twitter</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Instagram</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                <a 
+                  href="https://www.instagram.com/agencyuv/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Instagram
+                </a>
+                <a 
+                  href="https://www.linkedin.com/company/agencyuv" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  LinkedIn
+                </a>
               </div>
             </div>
           </div>
