@@ -44,7 +44,7 @@ const Hero = () => {
             alt="UV.Agency Logo" 
             className="h-32 w-auto mx-auto mb-12 transition-transform duration-300 hover:scale-105"
           />
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-10 text-white">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-12 text-white">
             The integrated<br />marketing agency
           </h1>
           <p className="hidden sm:block text-lg md:text-xl text-white/90 mb-16 max-w-[600px] mx-auto">
