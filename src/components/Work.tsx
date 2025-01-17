@@ -16,6 +16,38 @@ const projects = [
     category: "KRISPY KREME",
     description: "Out-of-the-box Strategy • Digital & Social Media Campaign • Impactful Outdoor Advertising • Influencer Collaborations • Effective Media Buying • Engaging Events & Experiences",
     image: "/src/img/krispy_front.png"
+  },
+  {
+    id: "ball-corporation",
+    title: "Our urban beat for world sustainability",
+    subtitle: "INTEGRATED CAMPAIGN WITH SOCIAL IMPACT",
+    category: "BALL CORPORATION",
+    description: "The urban beat song we produced and promoted to raise awareness that the can is the most sustainable packaging.",
+    image: ""
+  },
+  {
+    id: "uv-xp",
+    title: "Every company is an entertainment company",
+    subtitle: "DIGITAL TRANSFORMATION",
+    category: "UV XP",
+    description: "Digital transformation strategy and implementation",
+    image: ""
+  },
+  {
+    id: "mattel",
+    title: "Data strategy for an unforgettable Back to School",
+    subtitle: "DATA STRATEGY",
+    category: "MATTEL",
+    description: "Strategic data analysis for back to school campaign",
+    image: ""
+  },
+  {
+    id: "maybelline",
+    title: "We turn up the volume with Maybelline New York",
+    subtitle: "INTEGRATED CAMPAIGN",
+    category: "MAYBELLINE NEW YORK",
+    description: "Comprehensive marketing campaign for volume mascara launch",
+    image: ""
   }
 ];
 
@@ -47,17 +79,19 @@ const Work = () => {
                   boxShadow: 'rgba(0, 0, 0, 0.25) 0px 10px 30px -20px'
                 }}
               >
-                <div className="relative aspect-[4/3]">
-                  <img 
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    style={{
-                      opacity: 1,
-                      borderRadius: '20px'
-                    }}
-                  />
-                </div>
+                {project.image && (
+                  <div className="relative aspect-[4/3]">
+                    <img 
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      style={{
+                        opacity: 1,
+                        borderRadius: '20px'
+                      }}
+                    />
+                  </div>
+                )}
                 <div className="p-8">
                   <span className="text-[#7FD1CC] text-sm font-medium mb-2 block">
                     {project.category}
