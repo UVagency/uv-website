@@ -115,9 +115,6 @@ const Work = () => {
                   <h3 className="text-2xl font-bold mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    {project.description}
-                  </p>
                 </div>
               </Link>
             ))}
