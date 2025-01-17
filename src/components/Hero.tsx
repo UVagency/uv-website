@@ -34,6 +34,14 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen pt-16 flex items-center justify-center relative overflow-hidden bg-black">
+      {/* Animated Geometric Shapes */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="geometric-shape shape-1"></div>
+        <div className="geometric-shape shape-2"></div>
+        <div className="geometric-shape shape-3"></div>
+        <div className="geometric-shape shape-4"></div>
+      </div>
+
       {/* Polygon Background Effect */}
       <div className="absolute inset-0 opacity-50">
         <div className="w-full h-full" style={{
