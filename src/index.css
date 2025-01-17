@@ -91,9 +91,8 @@
 .slider-thumb::before {
   position: absolute;
   content: "";
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  right: -10%;
+  bottom: -10%;
   width: 562.5px;  /* Increased by 25% from 450px */
   height: 562.5px; /* Increased by 25% from 450px */
   background: rgba(23, 20, 29, 0.8);
