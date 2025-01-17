@@ -59,7 +59,7 @@ const Hero = () => {
 
           {/* Client Logos Carousel */}
           <div className="mt-24">
-            <p className="text-white/60 text-sm uppercase tracking-wider mb-12">Trusted by leading brands worldwide</p>
+            <p className="text-white/60 text-sm uppercase tracking-wider mb-6">Trusted by leading brands worldwide</p>
             <Carousel
               opts={{
                 align: "center",
