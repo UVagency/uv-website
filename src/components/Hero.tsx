@@ -37,9 +37,11 @@ const Hero = () => {
       <div className="slider-thumb"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <p className="text-white/80 text-lg md:text-xl mb-2 tracking-wide">
-            WE'RE UNITED VISIONS
-          </p>
+          <img 
+            src="/lovable-uploads/3de03002-3246-4965-b7e8-9780a09a46af.png" 
+            alt="UV.Agency Logo" 
+            className="h-16 w-auto mx-auto mb-8 transition-transform duration-300 hover:scale-105"
+          />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white">
             The integrated<br />marketing agency
           </h1>
