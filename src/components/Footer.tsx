@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-xl font-bold mb-4">UV.Agency</h3>
+              <h3 className="text-xl font-bold mb-4">United Visions</h3>
               <p className="text-gray-400">
                 Creating digital experiences that matter.
               </p>
