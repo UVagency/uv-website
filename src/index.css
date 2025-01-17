@@ -105,8 +105,8 @@
 .slider-thumb::before {
   position: absolute;
   content: "";
-  width: 618.75px;  /* Increased by 10% from 562.5px */
-  height: 618.75px; /* Increased by 10% from 562.5px */
+  width: 773.44px;  /* Increased by 25% from 618.75px */
+  height: 773.44px; /* Increased by 25% from 618.75px */
   background: rgba(23, 20, 29, 0.8);
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
