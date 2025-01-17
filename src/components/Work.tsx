@@ -15,7 +15,7 @@ const projects = [
     subtitle: "360° Launch Campaign in Chile",
     category: "KRISPY KREME",
     description: "Out-of-the-box Strategy • Digital & Social Media Campaign • Impactful Outdoor Advertising • Influencer Collaborations • Effective Media Buying • Engaging Events & Experiences",
-    image: "/placeholder.svg"
+    image: "/src/img/krispy_front.png"
   }
 ];
 
