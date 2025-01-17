@@ -35,7 +35,7 @@ const Hero = () => {
   });
 
   return (
-    <section className="hero-section min-h-screen pt-16 flex items-center justify-center relative overflow-hidden">
+    <section className="hero-section min-h-screen pt-16 pb-10 flex items-center justify-center relative overflow-hidden">
       <div className="slider-thumb"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
