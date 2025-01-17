@@ -58,7 +58,7 @@ const Hero = () => {
           </a>
 
           {/* Client Logos Carousel */}
-          <div className="mt-24">
+          <div className="mt-14">
             <p className="text-white/60 text-sm uppercase tracking-wider mb-6">Trusted by leading brands worldwide</p>
             <Carousel
               opts={{
