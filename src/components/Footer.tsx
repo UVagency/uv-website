@@ -13,8 +13,18 @@ const Footer = () => {
             
             <div>
               <h3 className="text-xl font-bold mb-4">Contact</h3>
-              <p className="text-gray-400">hello@uv.agency</p>
-              <p className="text-gray-400">newbusiness@uv.agency</p>
+              <a 
+                href="mailto:hello@uv.agency"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                hello@uv.agency
+              </a>
+              <a 
+                href="mailto:newbusiness@uv.agency"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                newbusiness@uv.agency
+              </a>
             </div>
             
             <div>
