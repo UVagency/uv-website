@@ -48,7 +48,7 @@ const Hero = () => {
             The integrated<br />marketing agency
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto">
-            Driving business growth through creativity, media, and phygital innovation
+            Driving business growth through creativity<br />and media, and phygital innovation
           </p>
           <a 
             href="#work"
