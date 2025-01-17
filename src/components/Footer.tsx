@@ -7,7 +7,7 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">United Visions</h3>
               <p className="text-gray-400">
-                Creating digital experiences that matter.
+                Growing businesses by seamlessly integrating creativity, media, and phygital experiences to drive real results.
               </p>
             </div>
             
