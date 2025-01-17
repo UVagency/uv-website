@@ -47,7 +47,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white">
             The integrated<br />marketing agency
           </h1>
-          <p className="hidden sm:block text-lg md:text-xl text-white/90 mb-12 max-w-[600px] mx-auto">
+          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto">
             Driving business growth through creativity, media, and phygital innovation
           </p>
           <a 
