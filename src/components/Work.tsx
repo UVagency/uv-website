@@ -4,7 +4,8 @@ const projects = [
   {
     id: "sabor-de-barrio",
     title: "Sabor de Barrio",
-    category: "CSR Campaign",
+    subtitle: "Bridging Bonds with Sabor de Barrio: A CSR Success Story",
+    category: "INTEGRATED CAMPAIGN WITH SOCIAL IMPACT",
     image: "/src/img/chancaca_front.png"
   },
   {
@@ -38,10 +39,13 @@ const Work = () => {
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
+                    <span className="text-[#7FD1CC] text-sm font-medium mb-2">{project.category}</span>
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p>{project.category}</p>
+                    {project.subtitle && (
+                      <p className="text-sm opacity-90">{project.subtitle}</p>
+                    )}
                   </div>
                 </div>
               </Link>
