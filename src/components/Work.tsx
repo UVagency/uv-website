@@ -18,6 +18,22 @@ const projects = [
     image: "/src/img/krispy_front.png"
   },
   {
+    id: "jetsmart",
+    title: "How we helped JetSmart to greatly surpass their brand's objectives",
+    subtitle: "INTEGRATED CAMPAIGN",
+    category: "JETSMART",
+    description: "Strategic marketing campaign for airline brand growth",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+  },
+  {
+    id: "heineken",
+    title: "Travel from POS to the UEFA Champions League final",
+    subtitle: "INTEGRATED CAMPAIGN",
+    category: "HEINEKEN",
+    description: "Comprehensive marketing strategy for UEFA Champions League",
+    image: "https://images.unsplash.com/photo-1600788886242-5c96aabe3757"
+  },
+  {
     id: "ball-corporation",
     title: "Our urban beat for world sustainability",
     subtitle: "INTEGRATED CAMPAIGN WITH SOCIAL IMPACT",
