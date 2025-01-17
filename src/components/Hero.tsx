@@ -40,7 +40,7 @@ const Hero = () => {
           <img 
             src="/lovable-uploads/3de03002-3246-4965-b7e8-9780a09a46af.png" 
             alt="UV.Agency Logo" 
-            className="h-16 w-auto mx-auto mb-8 transition-transform duration-300 hover:scale-105"
+            className="h-32 w-auto mx-auto mb-16 transition-transform duration-300 hover:scale-105"
           />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white">
             The integrated<br />marketing agency
