@@ -34,14 +34,6 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen pt-16 flex items-center justify-center relative overflow-hidden bg-black">
-      {/* Animated Geometric Shapes */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="geometric-shape shape-1"></div>
-        <div className="geometric-shape shape-2"></div>
-        <div className="geometric-shape shape-3"></div>
-        <div className="geometric-shape shape-4"></div>
-      </div>
-
       <div className="container mx-auto px-6 relative z-10">
         <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <p className="text-white/80 text-lg md:text-xl mb-2 tracking-wide">
