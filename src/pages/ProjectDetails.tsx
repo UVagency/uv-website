@@ -68,7 +68,7 @@ const ProjectDetails = () => {
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${projectData.videoId}?autoplay=1&rel=0`}
+              src={`https://www.youtube.com/embed/${projectData.videoId}?autoplay=1&rel=0&modestbranding=1`}
               title={projectData.title}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
