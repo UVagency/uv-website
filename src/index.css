@@ -93,8 +93,8 @@
   content: "";
   left: 30%;
   top: 20%;
-  width: 450px;
-  height: 450px;
+  width: 562.5px;  /* Increased by 25% from 450px */
+  height: 562.5px; /* Increased by 25% from 450px */
   background: rgba(23, 20, 29, 0.8);
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
