@@ -36,10 +36,10 @@
 
 /* Hero Section Styles */
 .hero-section {
-  background: linear-gradient(90deg,#e52e71,#ff8a00);
+  background: linear-gradient(90deg, #6BD8D7, #8B5CF6);
 }
 
-/* Animations */
+/* Animation Keyframes */
 @keyframes sliderShape {
   0%,100% {
     border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
@@ -95,7 +95,7 @@
   top: 20%;
   width: 450px;
   height: 450px;
-  background: #17141d;
+  background: rgba(23, 20, 29, 0.8);
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
   animation: sliderShape 5s linear infinite;
