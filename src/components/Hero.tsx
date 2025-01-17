@@ -5,9 +5,11 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from 'embla-carousel-autoplay';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     setMounted(true);
@@ -63,9 +65,9 @@ const Hero = () => {
                 align: "center",
                 loop: true,
                 skipSnaps: false,
-                dragFree: true,
+                dragFree: !isMobile,
                 containScroll: false,
-                slidesToScroll: 2,
+                slidesToScroll: isMobile ? 1 : 2,
                 duration: 50,
               }}
               plugins={[plugin]}
@@ -73,7 +75,7 @@ const Hero = () => {
             >
               <CarouselContent>
                 {clientLogos.map((client, index) => (
-                  <CarouselItem key={index} className="basis-1/6 md:basis-1/6">
+                  <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/6 md:basis-1/6"}>
                     <div className="p-4">
                       <img
                         src={client.logo}
