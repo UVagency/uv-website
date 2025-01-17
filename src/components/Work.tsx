@@ -109,7 +109,7 @@ const Work = () => {
                   </div>
                 )}
                 <div className="p-8">
-                  <span className="text-[#7FD1CC] text-sm font-medium mb-2 block">
+                  <span className="text-[#7FD1CC] text-sm font-bold mb-2 block">
                     {project.category}
                   </span>
                   <h3 className="text-2xl font-bold mb-3">
