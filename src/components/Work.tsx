@@ -73,7 +73,7 @@ const Work = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-[#7FD1CC] text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-[#7FD1CC] text-sm uppercase tracking-wider mb-4 block font-bold">
               PROJECTS AND CAMPAIGNS
             </span>
             <h2 className="text-5xl font-bold mb-6">Curated work</h2>
