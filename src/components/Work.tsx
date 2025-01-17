@@ -5,7 +5,7 @@ const projects = [
     id: "sabor-de-barrio",
     title: "Sabor de Barrio",
     category: "CSR Campaign",
-    image: "/lovable-uploads/6cbb6cd8-603d-460c-8ac7-8285e55a5f14.png"
+    image: "/src/img/chancaca_front.png"
   },
   {
     title: "Project Two",
