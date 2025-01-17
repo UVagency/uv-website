@@ -9,7 +9,7 @@ const projectData = {
   title: "Bridging Bonds with Sabor de Barrio: A CSR Success Story",
   client: "Chancaca Deliciosa",
   videoId: "yBkIRTwXNP4",
-  overview: "A corporate social responsibility campaign that strengthened the connection between Chancaca Deliciosa and the Chilean community by celebrating the traditional dish 'sopaipillas pasadas.'",
+  overview: "Sopaipillas pasadas, made with Chancaca Deliciosa, are an icon of Chile's culinary tradition. Our main objective is to strengthen this bond between the brand and people, generating impact and recall.",
   strategy: [
     "Collaborated with local municipality for best recipe contest",
     "Organized contest won by Mrs. Angélica",
