@@ -23,7 +23,7 @@ const projects = [
     subtitle: "INTEGRATED CAMPAIGN WITH SOCIAL IMPACT",
     category: "BALL CORPORATION",
     description: "The urban beat song we produced and promoted to raise awareness that the can is the most sustainable packaging.",
-    image: ""
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
   },
   {
     id: "uv-xp",
@@ -31,7 +31,7 @@ const projects = [
     subtitle: "DIGITAL TRANSFORMATION",
     category: "UV XP",
     description: "Digital transformation strategy and implementation",
-    image: ""
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
   },
   {
     id: "mattel",
@@ -39,7 +39,7 @@ const projects = [
     subtitle: "DATA STRATEGY",
     category: "MATTEL",
     description: "Strategic data analysis for back to school campaign",
-    image: ""
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
   },
   {
     id: "maybelline",
@@ -47,7 +47,7 @@ const projects = [
     subtitle: "INTEGRATED CAMPAIGN",
     category: "MAYBELLINE NEW YORK",
     description: "Comprehensive marketing campaign for volume mascara launch",
-    image: ""
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
   }
 ];
 
