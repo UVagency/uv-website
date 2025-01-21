@@ -2,10 +2,23 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { useParams } from 'react-router-dom';
+import { Json } from '@/integrations/supabase/types';
 
 interface KPI {
   label: string;
   value: string;
+}
+
+// Type guard to check if a value is a KPI
+function isKPI(value: Json): value is KPI {
+  return (
+    typeof value === 'object' &&
+    value !== null &&
+    'label' in value &&
+    'value' in value &&
+    typeof (value as KPI).label === 'string' &&
+    typeof (value as KPI).value === 'string'
+  );
 }
 
 const ProjectMetrics = () => {
@@ -91,7 +104,7 @@ const ProjectMetrics = () => {
         </div>
       )}
       
-      {metrics.kpis && Array.isArray(metrics.kpis) && metrics.kpis.map((kpi: KPI, index: number) => (
+      {metrics.kpis && Array.isArray(metrics.kpis) && metrics.kpis.filter(isKPI).map((kpi, index) => (
         <div key={index}>
           <h3 className="font-bold mb-3">Highlighted KPI</h3>
           <ul className="space-y-2 text-gray-600">
