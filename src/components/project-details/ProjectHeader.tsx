@@ -20,6 +20,10 @@ const ProjectHeader = ({ project }: ProjectHeaderProps) => {
         />
       </Link>
       
+      <p className="text-lg font-semibold text-gray-600 mb-2">
+        {project.brand}
+      </p>
+      
       <h1 className="text-4xl font-bold mb-6">
         {project.title}
       </h1>
