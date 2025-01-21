@@ -7,7 +7,7 @@ const projects = [
     subtitle: "INTEGRATED CAMPAIGN WITH SOCIAL IMPACT",
     category: "CHANCACA DELICIOSA",
     description: "Recognition of local communities and culinary traditions",
-    image: "/src/img/chancaca_front.png"
+    image: "/src/img/work/deliciosa_profile.png"
   },
   {
     id: "krispy-kreme",
@@ -15,7 +15,7 @@ const projects = [
     subtitle: "360° Launch Campaign in Chile",
     category: "KRISPY KREME",
     description: "Out-of-the-box Strategy • Digital & Social Media Campaign • Impactful Outdoor Advertising • Influencer Collaborations • Effective Media Buying • Engaging Events & Experiences",
-    image: "/src/img/krispy_front.png"
+    image: "/src/img/work/krispykreme_profile.png"
   },
   {
     id: "jetsmart",
@@ -23,7 +23,7 @@ const projects = [
     subtitle: "INTEGRATED CAMPAIGN",
     category: "JETSMART",
     description: "Strategic marketing campaign for airline brand growth",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+    image: "/src/img/work/jetsmart_profile.png"
   },
   {
     id: "heineken",
@@ -31,7 +31,7 @@ const projects = [
     subtitle: "INTEGRATED CAMPAIGN",
     category: "HEINEKEN",
     description: "Comprehensive marketing strategy for UEFA Champions League",
-    image: "https://images.unsplash.com/photo-1600788886242-5c96aabe3757"
+    image: "/src/img/work/heineken_profile.png"
   },
   {
     id: "ball-corporation",
@@ -39,7 +39,7 @@ const projects = [
     subtitle: "INTEGRATED CAMPAIGN WITH SOCIAL IMPACT",
     category: "BALL CORPORATION",
     description: "The urban beat song we produced and promoted to raise awareness that the can is the most sustainable packaging.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+    image: "/src/img/work/quierolata_profile.png"
   },
   {
     id: "uv-xp",
@@ -47,7 +47,7 @@ const projects = [
     subtitle: "DIGITAL TRANSFORMATION",
     category: "UV XP",
     description: "Digital transformation strategy and implementation",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+    image: "/src/img/work/xp_profile.png"
   },
   {
     id: "mattel",
@@ -55,7 +55,7 @@ const projects = [
     subtitle: "DATA STRATEGY",
     category: "MATTEL",
     description: "Strategic data analysis for back to school campaign",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+    image: "/src/img/work/mattel_profile.png"
   },
   {
     id: "maybelline",
@@ -63,7 +63,7 @@ const projects = [
     subtitle: "INTEGRATED CAMPAIGN",
     category: "MAYBELLINE NEW YORK",
     description: "Comprehensive marketing campaign for volume mascara launch",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+    image: "/src/img/work/maybelline_profile.png"
   }
 ];
 
