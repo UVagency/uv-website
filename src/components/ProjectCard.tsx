@@ -16,14 +16,12 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       }}
     >
       {project.image && (
-        <div className="relative h-[280px] overflow-hidden rounded-t-[20px]">
+        <div className="relative w-full h-64 overflow-hidden">
           <img 
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover object-center"
-            style={{
-              opacity: 1,
-            }}
+            className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
           />
         </div>
       )}
