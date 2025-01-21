@@ -1,71 +1,5 @@
-import { Link } from 'react-router-dom';
-
-const projects = [
-  {
-    id: "sabor-de-barrio",
-    title: "Bridging Bonds with Sabor de Barrio: A CSR Success Story",
-    subtitle: "INTEGRATED CAMPAIGN WITH SOCIAL IMPACT",
-    category: "CHANCACA DELICIOSA",
-    description: "Recognition of local communities and culinary traditions",
-    image: "/src/img/work/deliciosa_profile.png"
-  },
-  {
-    id: "krispy-kreme",
-    title: "Krispy Kreme's Sweet Launch: Winning Hearts in Chile",
-    subtitle: "360° Launch Campaign in Chile",
-    category: "KRISPY KREME",
-    description: "Out-of-the-box Strategy • Digital & Social Media Campaign • Impactful Outdoor Advertising • Influencer Collaborations • Effective Media Buying • Engaging Events & Experiences",
-    image: "/src/img/work/krispykreme_profile.png"
-  },
-  {
-    id: "jetsmart",
-    title: "How we helped JetSmart to greatly surpass their brand's objectives",
-    subtitle: "INTEGRATED CAMPAIGN",
-    category: "JETSMART",
-    description: "Strategic marketing campaign for airline brand growth",
-    image: "/src/img/work/jetsmart_profile.png"
-  },
-  {
-    id: "heineken",
-    title: "Travel from POS to the UEFA Champions League final",
-    subtitle: "INTEGRATED CAMPAIGN",
-    category: "HEINEKEN",
-    description: "Comprehensive marketing strategy for UEFA Champions League",
-    image: "/src/img/work/heineken_profile.png"
-  },
-  {
-    id: "ball-corporation",
-    title: "Our urban beat for world sustainability",
-    subtitle: "INTEGRATED CAMPAIGN WITH SOCIAL IMPACT",
-    category: "BALL CORPORATION",
-    description: "The urban beat song we produced and promoted to raise awareness that the can is the most sustainable packaging.",
-    image: "/src/img/work/quierolata_profile.png"
-  },
-  {
-    id: "uv-xp",
-    title: "Every company is an entertainment company",
-    subtitle: "DIGITAL TRANSFORMATION",
-    category: "UV XP",
-    description: "Digital transformation strategy and implementation",
-    image: "/src/img/work/xp_profile.png"
-  },
-  {
-    id: "mattel",
-    title: "Data strategy for an unforgettable Back to School",
-    subtitle: "DATA STRATEGY",
-    category: "MATTEL",
-    description: "Strategic data analysis for back to school campaign",
-    image: "/src/img/work/mattel_profile.png"
-  },
-  {
-    id: "maybelline",
-    title: "We turn up the volume with Maybelline New York",
-    subtitle: "INTEGRATED CAMPAIGN",
-    category: "MAYBELLINE NEW YORK",
-    description: "Comprehensive marketing campaign for volume mascara launch",
-    image: "/src/img/work/maybelline_profile.png"
-  }
-];
+import { projects } from '../data/projects';
+import ProjectCard from './ProjectCard';
 
 const Work = () => {
   return (
@@ -86,37 +20,7 @@ const Work = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Link 
-                key={index}
-                to={project.id ? `/projects/${project.id}` : "#"}
-                className="group bg-white rounded-[20px] overflow-hidden transition-all duration-300 hover-scale"
-                style={{
-                  border: '1px solid rgba(0, 0, 0, 0.08)',
-                  boxShadow: 'rgba(0, 0, 0, 0.25) 0px 10px 30px -20px'
-                }}
-              >
-                {project.image && (
-                  <div className="relative aspect-[4/3]">
-                    <img 
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                      style={{
-                        opacity: 1,
-                        borderRadius: '20px'
-                      }}
-                    />
-                  </div>
-                )}
-                <div className="p-8">
-                  <span className="text-[#7FD1CC] text-sm font-bold mb-2 block">
-                    {project.category}
-                  </span>
-                  <h3 className="text-2xl font-bold mb-3">
-                    {project.title}
-                  </h3>
-                </div>
-              </Link>
+              <ProjectCard key={index} project={project} />
             ))}
           </div>
         </div>
