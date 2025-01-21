@@ -11,7 +11,6 @@
       "kpi1Value": "+5MM",
       "kpi2": "UGC Reach at Event",
       "kpi2Value": "+1.5MM",
-      "videoLink": "",
       "videoUrl": "https://www.youtube.com/embed/yBkIRTwXNP4",
       "image": "/work/deliciosa_profile.png",
       "date": "2023-12-01",
@@ -49,7 +48,6 @@
       "kpi1Value": "+80%",
       "kpi2": "Reach with UGC",
       "kpi2Value": "+3MM",
-      "videoLink": "",
       "videoUrl": "https://www.youtube.com/embed/jweCIhKuj5Q",
       "image": "/work/krispykreme_profile.png",
       "date": "2023-11-15",
@@ -73,26 +71,26 @@
       "brand": "BALL CORPORATION",
       "accent": "#FF6F20",
       "title": "Our urban beat for world sustainability",
-      "shortDescription": "Innovative music-driven campaign promoting sustainable packaging solutions and environmental awareness.",
-      "kpi1": "Engagement Rate",
-      "kpi1Value": "+1.2MM",
-      "kpi2": "Brand Awareness",
-      "kpi2Value": "+4.5MM",
-      "videoLink": "Watch Sustainability Video",
-      "videoUrl": "https://www.youtube.com/embed/example2",
+      "shortDescription": "The urban beat song we produced and promoted to raise awareness that the can is the most sustainable packaging in the world.",
+      "kpi1": "plays of the song",
+      "kpi1Value": "+5 millions",
+      "kpi2": "growth in followers",
+      "kpi2Value": "+300%",
+      "videoUrl": "https://www.youtube.com/watch?v=u9q91KufDXA",
       "image": "/work/quierolata_profile.png",
-      "date": "2023-10-10",
+      "date": "2024-10-10",
       "slug": "ball-corporation-sustainability",
       "services": [
         "Sustainability Consulting",
-        "Creative Services"
+        "Creative Services",
+        "Paid Media"
       ],
       "channels": [
-        "Social Media",
-        "Events",
-        "OOH"
+        "Youtube",
+        "Spotify",
+        "Instagram, TikTok, Facebook"
       ],
-      "content": "Our campaign focused on promoting sustainable practices through engaging music and community involvement...",
+      "content": "We know it. Cans are 100% and infinitely recyclable. But does everyone know that?\nIt's time for can recycling to become an unstoppable trend!\nTogether with Ball Corporation, the world's leading can manufacturer, we created QUIEROLATA, a movement that encourages people to prefer the can format and recycle them.",
       "category": "Sustainability"
     },
     {
