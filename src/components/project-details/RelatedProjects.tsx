@@ -1,5 +1,6 @@
 import React from 'react';
 import { useProjects } from '../../hooks/useProjects';
+import { Link } from 'react-router-dom';
 
 const RelatedProjects = () => {
   const projects = useProjects();
@@ -9,7 +10,11 @@ const RelatedProjects = () => {
       <h2 className="text-2xl font-bold mb-8">Curated works</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.slice(0, 2).map((relatedProject) => (
-          <div key={relatedProject.id} className="group cursor-pointer">
+          <Link 
+            to={`/projects/${relatedProject.id}`}
+            key={relatedProject.id} 
+            className="group cursor-pointer"
+          >
             <div className="aspect-[1.47/1] mb-4 overflow-hidden rounded-lg">
               <img
                 src={relatedProject.image}
@@ -23,7 +28,7 @@ const RelatedProjects = () => {
             <h3 className="font-bold text-lg">
               {relatedProject.title}
             </h3>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

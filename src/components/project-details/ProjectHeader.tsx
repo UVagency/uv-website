@@ -6,22 +6,30 @@ interface ProjectHeaderProps {
   project: Project;
 }
 
-const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
+const ProjectHeader = ({ project }: ProjectHeaderProps) => {
   return (
     <div className="text-center mb-16">
-      <Link to="/" className="inline-block mb-12 transition-transform duration-300 hover:scale-105">
-        <img 
-          src="/lovable-uploads/3de03002-3246-4965-b7e8-9780a09a46af.png" 
-          alt="UV.Agency Logo" 
-          className="h-20 w-auto mx-auto"
-        />
+      <Link 
+        to="/" 
+        className="inline-flex items-center text-gray-600 mb-8 hover:text-gray-900 transition-colors"
+      >
+        <svg 
+          className="w-4 h-4 mr-2" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={2} 
+            d="M15 19l-7-7 7-7" 
+          />
+        </svg>
+        Back to projects
       </Link>
       
-      <span className="text-[#7FD1CC] text-sm uppercase tracking-wider mb-4 block">
-        {project.category}
-      </span>
-      
-      <h1 className="text-3xl md:text-5xl font-bold mb-8">
+      <h1 className="text-4xl font-bold mb-6">
         {project.title}
       </h1>
       
