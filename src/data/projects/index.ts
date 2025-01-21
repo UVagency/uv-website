@@ -1,8 +1,8 @@
-import { Project } from './types/project';
-import { saborDeBarrio } from './projects/sabor-de-barrio';
-import { krispyKreme } from './projects/krispy-kreme';
-import { ballCorporation } from './projects/ball-corporation';
-import { heineken } from './projects/heineken';
+import { Project } from '../types/project';
+import { saborDeBarrio } from './sabor-de-barrio';
+import { krispyKreme } from './krispy-kreme';
+import { ballCorporation } from './ball-corporation';
+import { heineken } from './heineken';
 
 export type { Project };
 
