@@ -8,26 +8,53 @@ interface ProjectHeaderProps {
 }
 
 const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectSlug }) => {
-  const { data: project, isLoading } = useQuery({
+  const { data: project, isLoading, error } = useQuery({
     queryKey: ['project', projectSlug],
     queryFn: async () => {
+      console.log('Fetching project with slug:', projectSlug);
       const { data, error } = await supabase
         .from('projects')
         .select('*')
         .eq('slug', projectSlug)
-        .single();
+        .maybeSingle();
       
-      if (error) throw error;
+      if (error) {
+        console.error('Error fetching project:', error);
+        throw error;
+      }
+      
+      console.log('Project data:', data);
       return data;
     }
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="text-center mb-16">
+        <div className="animate-pulse">
+          <div className="h-20 w-40 bg-gray-200 mx-auto mb-12"></div>
+          <div className="h-4 w-24 bg-gray-200 mx-auto mb-4"></div>
+          <div className="h-8 w-64 bg-gray-200 mx-auto mb-8"></div>
+          <div className="h-4 w-96 bg-gray-200 mx-auto"></div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center mb-16 text-red-500">
+        Error loading project details. Please try again later.
+      </div>
+    );
   }
 
   if (!project) {
-    return <div>Project not found</div>;
+    return (
+      <div className="text-center mb-16">
+        Project not found
+      </div>
+    );
   }
 
   return (
