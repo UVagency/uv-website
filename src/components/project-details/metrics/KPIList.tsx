@@ -3,24 +3,26 @@ import { Json } from '@/integrations/supabase/types';
 import { isKPI } from '@/hooks/useProjectMetrics';
 
 interface KPIListProps {
-  kpis: Json[];
+  kpis: Json;
 }
 
 const KPIList = ({ kpis }: KPIListProps) => {
-  if (!Array.isArray(kpis) || kpis.length === 0) return null;
+  // Ensure kpis is an array and contains valid KPI objects
+  const validKpis = Array.isArray(kpis) ? kpis.filter(isKPI) : [];
+
+  if (validKpis.length === 0) return null;
 
   return (
-    <>
-      {kpis.filter(isKPI).map((kpi, index) => (
-        <div key={index}>
-          <h3 className="font-bold mb-3">Highlighted KPI</h3>
-          <ul className="space-y-2 text-gray-600">
-            <li>{kpi.value}</li>
-            <li>{kpi.label}</li>
-          </ul>
-        </div>
-      ))}
-    </>
+    <div>
+      <h3 className="font-bold mb-3">KPIs</h3>
+      <ul className="space-y-2 text-gray-600">
+        {validKpis.map((kpi, index) => (
+          <li key={index}>
+            <span className="font-medium">{kpi.label}:</span> {kpi.value}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

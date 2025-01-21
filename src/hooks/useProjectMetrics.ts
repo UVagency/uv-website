@@ -8,7 +8,7 @@ export interface KPI {
 }
 
 // Type guard to check if a value is a Json object that matches KPI structure
-export function isKPI(value: Json): value is { label: string; value: string } {
+export function isKPI(value: Json): value is KPI {
   if (typeof value !== 'object' || value === null) {
     return false;
   }
