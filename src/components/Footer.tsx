@@ -1,18 +1,18 @@
 const Footer = () => {
   return (
-    <footer className="py-12 bg-black text-white">
+    <footer className="py-12" style={{ backgroundColor: '#2A3C41' }}>
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-xl font-bold mb-4">United Visions</h3>
+              <h3 className="text-xl font-bold mb-4 text-white">United Visions</h3>
               <p className="text-gray-400">
                 Growing businesses by seamlessly integrating creativity, media, and phygital experiences to drive real results.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold mb-4">Contact</h3>
+              <h3 className="text-xl font-bold mb-4 text-white">Contact</h3>
               <a 
                 href="mailto:hello@uv.agency"
                 className="block text-gray-400 hover:text-white transition-colors"
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
             
             <div>
-              <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+              <h3 className="text-xl font-bold mb-4 text-white">Follow Us</h3>
               <div className="flex space-x-4">
                 <a 
                   href="https://www.instagram.com/agencyuv/" 
