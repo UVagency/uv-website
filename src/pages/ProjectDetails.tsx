@@ -14,6 +14,9 @@ const ProjectDetails = () => {
   const { id } = useParams();
   const project = useProject(id);
   
+  console.log('Current project ID:', id);
+  console.log('Project data:', project);
+
   if (!project) {
     return <div>Project not found</div>;
   }
