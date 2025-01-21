@@ -9,13 +9,19 @@ const ProjectDescription = () => {
   const { data: project, isLoading } = useQuery({
     queryKey: ['project-description', projectSlug],
     queryFn: async () => {
+      console.log('Fetching project description:', projectSlug);
       const { data, error } = await supabase
         .from('projects')
         .select('full_description')
         .eq('slug', projectSlug)
-        .single();
+        .maybeSingle();
 
-      if (error) throw error;
+      if (error) {
+        console.error('Error fetching project description:', error);
+        throw error;
+      }
+
+      console.log('Fetched project description:', data);
       return data;
     },
     enabled: !!projectSlug

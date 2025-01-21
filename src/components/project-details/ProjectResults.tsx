@@ -9,16 +9,36 @@ const ProjectResults = () => {
   const { data: results, isLoading } = useQuery({
     queryKey: ['project-results', projectSlug],
     queryFn: async () => {
+      console.log('Fetching results for project:', projectSlug);
+      
+      // First get the project id
+      const projectResponse = await supabase
+        .from('projects')
+        .select('id')
+        .eq('slug', projectSlug)
+        .maybeSingle();
+
+      if (projectResponse.error) {
+        console.error('Error fetching project:', projectResponse.error);
+        throw projectResponse.error;
+      }
+
+      if (!projectResponse.data) {
+        console.log('No project found with slug:', projectSlug);
+        return null;
+      }
+
       const { data, error } = await supabase
         .from('project_results')
         .select('*')
-        .eq('project_id', (await supabase
-          .from('projects')
-          .select('id')
-          .eq('slug', projectSlug)
-          .single()).data?.id);
+        .eq('project_id', projectResponse.data.id);
 
-      if (error) throw error;
+      if (error) {
+        console.error('Error fetching results:', error);
+        throw error;
+      }
+
+      console.log('Fetched results:', data);
       return data;
     },
     enabled: !!projectSlug

@@ -9,17 +9,37 @@ const ProjectMetrics = () => {
   const { data: metrics, isLoading } = useQuery({
     queryKey: ['project-metrics', projectSlug],
     queryFn: async () => {
+      console.log('Fetching metrics for project:', projectSlug);
+      
+      // First get the project id
+      const projectResponse = await supabase
+        .from('projects')
+        .select('id')
+        .eq('slug', projectSlug)
+        .maybeSingle();
+
+      if (projectResponse.error) {
+        console.error('Error fetching project:', projectResponse.error);
+        throw projectResponse.error;
+      }
+
+      if (!projectResponse.data) {
+        console.log('No project found with slug:', projectSlug);
+        return null;
+      }
+
       const { data, error } = await supabase
         .from('project_metrics')
         .select('*')
-        .eq('project_id', (await supabase
-          .from('projects')
-          .select('id')
-          .eq('slug', projectSlug)
-          .single()).data?.id)
-        .single();
+        .eq('project_id', projectResponse.data.id)
+        .maybeSingle();
 
-      if (error) throw error;
+      if (error) {
+        console.error('Error fetching metrics:', error);
+        throw error;
+      }
+
+      console.log('Fetched metrics:', data);
       return data;
     },
     enabled: !!projectSlug
@@ -45,25 +65,29 @@ const ProjectMetrics = () => {
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-sm">
-      <div>
-        <h3 className="font-bold mb-3">Services</h3>
-        <ul className="space-y-2 text-gray-600">
-          {metrics.services.map((service: string, index: number) => (
-            <li key={index}>{service}</li>
-          ))}
-        </ul>
-      </div>
+      {metrics.services && metrics.services.length > 0 && (
+        <div>
+          <h3 className="font-bold mb-3">Services</h3>
+          <ul className="space-y-2 text-gray-600">
+            {metrics.services.map((service: string, index: number) => (
+              <li key={index}>{service}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       
-      <div>
-        <h3 className="font-bold mb-3">Channels</h3>
-        <ul className="space-y-2 text-gray-600">
-          {metrics.channels.map((channel: string, index: number) => (
-            <li key={index}>{channel}</li>
-          ))}
-        </ul>
-      </div>
+      {metrics.channels && metrics.channels.length > 0 && (
+        <div>
+          <h3 className="font-bold mb-3">Channels</h3>
+          <ul className="space-y-2 text-gray-600">
+            {metrics.channels.map((channel: string, index: number) => (
+              <li key={index}>{channel}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       
-      {metrics.kpis && metrics.kpis.length >= 2 && metrics.kpis.map((kpi: any, index: number) => (
+      {metrics.kpis && Array.isArray(metrics.kpis) && metrics.kpis.map((kpi: any, index: number) => (
         <div key={index}>
           <h3 className="font-bold mb-3">Highlighted KPI</h3>
           <ul className="space-y-2 text-gray-600">
