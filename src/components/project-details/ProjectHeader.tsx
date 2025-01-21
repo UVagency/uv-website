@@ -14,7 +14,18 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectSlug }) => {
       console.log('Fetching project with slug:', projectSlug);
       const { data, error } = await supabase
         .from('projects')
-        .select('*')
+        .select(`
+          *,
+          project_metrics (
+            services,
+            channels,
+            kpis
+          ),
+          project_results (
+            label,
+            value
+          )
+        `)
         .eq('slug', projectSlug)
         .maybeSingle();
       
