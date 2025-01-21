@@ -17,6 +17,14 @@ export const projects: Project[] = [
     image: "/work/deliciosa_profile.png"
   },
   {
+    id: "krispy-kreme",
+    title: "Krispy Kreme's Sweet Launch: Winning Hearts in Chile",
+    subtitle: "360° Launch Campaign in Chile",
+    category: "KRISPY KREME",
+    description: "Out-of-the-box Strategy • Digital & Social Media Campaign • Impactful Outdoor Advertising • Influencer Collaborations • Effective Media Buying • Engaging Events & Experiences",
+    image: "/work/krispykreme_profile.png"
+  },
+  {
     id: "ball-corporation",
     title: "Our urban beat for world sustainability",
     subtitle: "INTEGRATED CAMPAIGN WITH SOCIAL IMPACT",
