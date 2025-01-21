@@ -16,14 +16,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       }}
     >
       {project.image && (
-        <div className="relative aspect-[4/3]">
+        <div className="relative h-[280px] overflow-hidden rounded-t-[20px]">
           <img 
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             style={{
               opacity: 1,
-              borderRadius: '20px'
             }}
           />
         </div>
