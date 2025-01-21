@@ -9,15 +9,18 @@ interface KPI {
   value: string;
 }
 
-// Type guard to check if a value is a KPI
-function isKPI(value: Json): value is KPI {
+// Type guard to check if a value is a Json object that matches KPI structure
+function isKPI(value: Json): value is { label: string; value: string } {
+  if (typeof value !== 'object' || value === null) {
+    return false;
+  }
+
+  const candidate = value as Record<string, unknown>;
   return (
-    typeof value === 'object' &&
-    value !== null &&
-    'label' in value &&
-    'value' in value &&
-    typeof (value as KPI).label === 'string' &&
-    typeof (value as KPI).value === 'string'
+    'label' in candidate &&
+    'value' in candidate &&
+    typeof candidate.label === 'string' &&
+    typeof candidate.value === 'string'
   );
 }
 
