@@ -1,7 +1,9 @@
-import { projects } from '../data/projects';
+import { useProjects } from '../hooks/useProjects';
 import ProjectCard from './ProjectCard';
 
 const Work = () => {
+  const projects = useProjects();
+  
   return (
     <section id="work" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -19,8 +21,8 @@ const Work = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </div>

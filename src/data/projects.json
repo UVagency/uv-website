@@ -1,0 +1,127 @@
+{
+  "projects": [
+    {
+      "id": "chancaca-deliciosa",
+      "featured": true,
+      "brand": "CHANCACA DELICIOSA",
+      "accent": "#7FD1CC",
+      "title": "Bridging Bonds with Sabor de Barrio: A CSR Success Story",
+      "shortDescription": "Sopaipillas pasadas, made with Chancaca Deliciosa, are an icon of Chile's culinary tradition. Our main objective is to strengthen this bond between the brand and people, generating impact and recall.",
+      "kpi1": "Digital Reach",
+      "kpi1Value": "+5MM",
+      "kpi2": "UGC Reach at Event",
+      "kpi2Value": "+1.5MM",
+      "videoLink": "",
+      "videoUrl": "https://www.youtube.com/embed/yBkIRTwXNP4",
+      "image": "/work/deliciosa_profile.png",
+      "date": "2023-12-01",
+      "slug": "chancaca-deliciosa",
+      "services": [
+        "Creative services",
+        "Paid Media",
+        "Content, Influencers y Growth Marketing"
+      ],
+      "channels": [
+        "Neighborhood, Community, OOH",
+        "Physical, BTL",
+        "YouTube, Instagram, Facebook"
+      ],
+      "content": "We present a campaign with local taste, with 'SABOR DE BARRIO'! 'Sopaipillas pasadas' made with Chancaca Deliciosa, are an icon of Chile's culinary tradition...",
+      "category": "Brand Strategy"
+    },
+    {
+      "id": "krispy-kreme",
+      "featured": true,
+      "brand": "KRISPY KREME",
+      "accent": "#00A650",
+      "title": "Krispy Kreme's Sweet Launch: Winning Hearts in Chile",
+      "shortDescription": "Discover how we celebrated Krispy Kreme's arrival in the country and captured the hearts of thousands with its incomparable sweetness.",
+      "kpi1": "Coverage of target audience",
+      "kpi1Value": "+80%",
+      "kpi2": "Reach with UGC",
+      "kpi2Value": "+3MM",
+      "videoLink": "",
+      "videoUrl": "https://www.youtube.com/watch?v=jweCIhKuj5Q",
+      "image": "/work/krispykreme_profile.png",
+      "date": "2023-11-15",
+      "slug": "krispy-kreme-launch",
+      "services": [
+        "Brand Strategy",
+        "Digital Marketing",
+        "Influencer Management"
+      ],
+      "channels": [
+        "Social Media",
+        "OOH",
+        "Retail"
+      ],
+      "results": [
+        "+80% Coverage of target audience",
+        "+3MM Reach with UGC",
+        "115 Traditional media mentions",
+        "70K USD in earned media value",
+        "+5,000,000 Digital reach",
+        "+78% Digital coverage",
+        "+1,000 Attendees at event"
+      ],
+      "content": "Launching Krispy Kreme in Chile required a comprehensive strategy...",
+      "category": "Market Entry"
+    },
+    {
+      "id": "ball-corporation",
+      "featured": true,
+      "brand": "BALL CORPORATION",
+      "accent": "#FF6F20",
+      "title": "Our urban beat for world sustainability",
+      "shortDescription": "Innovative music-driven campaign promoting sustainable packaging solutions and environmental awareness.",
+      "kpi1": "Engagement Rate",
+      "kpi1Value": "+1.2MM",
+      "kpi2": "Brand Awareness",
+      "kpi2Value": "+4.5MM",
+      "videoLink": "Watch Sustainability Video",
+      "videoUrl": "https://www.youtube.com/embed/example2",
+      "image": "/work/quierolata_profile.png",
+      "date": "2023-10-10",
+      "slug": "ball-corporation-sustainability",
+      "services": [
+        "Sustainability Consulting",
+        "Creative Services"
+      ],
+      "channels": [
+        "Social Media",
+        "Events",
+        "OOH"
+      ],
+      "content": "Our campaign focused on promoting sustainable practices through engaging music and community involvement...",
+      "category": "Sustainability"
+    },
+    {
+      "id": "heineken",
+      "featured": true,
+      "brand": "HEINEKEN",
+      "accent": "#007A33",
+      "title": "Travel from POS to the UEFA Champions League final",
+      "shortDescription": "Strategic point-of-sale activation campaign connecting local consumers with global sports entertainment.",
+      "kpi1": "Event Attendance",
+      "kpi1Value": "+20K",
+      "kpi2": "Social Media Mentions",
+      "kpi2Value": "+500K",
+      "videoLink": "Watch Heineken Campaign Video",
+      "videoUrl": "https://www.youtube.com/embed/example3",
+      "image": "/work/heineken_profile.png",
+      "date": "2023-09-05",
+      "slug": "heineken-uefa-campaign",
+      "services": [
+        "Event Marketing",
+        "Brand Activation"
+      ],
+      "channels": [
+        "Retail",
+        "Social Media",
+        "OOH"
+      ],
+      "content": "Heineken's campaign aimed to enhance consumer engagement through strategic activations at key events...",
+      "category": "Event Marketing"
+    }
+  ]
+}

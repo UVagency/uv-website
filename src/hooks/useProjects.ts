@@ -1,4 +1,6 @@
-export interface Project {
+import projectsData from '../data/projects.json';
+
+export type Project = {
   id: string;
   featured: boolean;
   brand: string;
@@ -18,5 +20,14 @@ export interface Project {
   channels: string[];
   content: string;
   category: string;
-  results?: string[];  // Added this optional property
-}
+  results?: string[];
+};
+
+export const useProjects = (): Project[] => {
+  return projectsData.projects;
+};
+
+export const useProject = (id: string | undefined): Project | undefined => {
+  if (!id) return undefined;
+  return projectsData.projects.find(project => project.id === id);
+};

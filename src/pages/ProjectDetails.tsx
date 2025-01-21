@@ -2,19 +2,17 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { projects } from '../data/projects';
 import ProjectHeader from '../components/project-details/ProjectHeader';
 import ProjectVideo from '../components/project-details/ProjectVideo';
 import ProjectMetrics from '../components/project-details/ProjectMetrics';
 import ProjectResults from '../components/project-details/ProjectResults';
 import ProjectDescription from '../components/project-details/ProjectDescription';
 import RelatedProjects from '../components/project-details/RelatedProjects';
+import { useProject } from '../hooks/useProjects';
 
 const ProjectDetails = () => {
   const { id } = useParams();
-  console.log("Project ID:", id);
-  
-  const project = projects.find(p => p.id === id);
+  const project = useProject(id);
   
   if (!project) {
     return <div>Project not found</div>;
