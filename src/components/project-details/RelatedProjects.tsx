@@ -1,7 +1,9 @@
 import React from 'react';
-import { Project, projects } from '@/data/projects';
+import { useProjects } from '../../hooks/useProjects';
 
 const RelatedProjects = () => {
+  const projects = useProjects();
+  
   return (
     <div className="mt-20">
       <h2 className="text-2xl font-bold mb-8">Curated works</h2>

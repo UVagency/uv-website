@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from '@/data/projects';
+import { Project } from '../../hooks/useProjects';
 import { Link } from 'react-router-dom';
 
 interface ProjectHeaderProps {
@@ -26,8 +26,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
       </h1>
       
       <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-        Sopaipillas pasadas, made with Chancaca Deliciosa, are an icon of Chile's culinary tradition. 
-        Our main objective is to strengthen this bond between the brand and people, generating impact and recall.
+        {project.shortDescription}
       </p>
     </div>
   );
