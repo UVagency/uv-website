@@ -12,7 +12,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
         {project.category}
       </span>
       
-      <h1 className="text-3xl md:text-5xl font-bold mb-8">
+      <h1 className="text-3xl md:text-5xl font-bold mb-12">
         {project.title}
       </h1>
       
