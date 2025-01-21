@@ -17,6 +17,7 @@ export interface Project {
   services: string[];
   channels: string[];
   content: string;
+  category: string; // Added this field
 }
 
 export const projects: Project[] = [
@@ -38,7 +39,8 @@ export const projects: Project[] = [
     slug: "sabor-de-barrio",
     services: ["Creative services", "Paid Media", "Content, Influencers y Growth Marketing"],
     channels: ["Neighborhood, Community, OOH", "Physical, BTL", "YouTube, Instagram, Facebook"],
-    content: "We present a campaign with local taste, with 'SABOR DE BARRIO'! 'Sopaipillas pasadas' made with Chancaca Deliciosa, are an icon of Chile's culinary tradition..."
+    content: "We present a campaign with local taste, with 'SABOR DE BARRIO'! 'Sopaipillas pasadas' made with Chancaca Deliciosa, are an icon of Chile's culinary tradition...",
+    category: "Brand Strategy" // Added category
   },
   {
     id: "krispy-kreme",
@@ -58,7 +60,8 @@ export const projects: Project[] = [
     slug: "krispy-kreme-launch",
     services: ["Brand Strategy", "Digital Marketing", "Influencer Management"],
     channels: ["Social Media", "OOH", "Retail"],
-    content: "Launching Krispy Kreme in Chile required a comprehensive strategy..."
+    content: "Launching Krispy Kreme in Chile required a comprehensive strategy...",
+    category: "Market Entry" // Added category
   },
   {
     id: "ball-corporation",
@@ -78,7 +81,8 @@ export const projects: Project[] = [
     slug: "ball-corporation-sustainability",
     services: ["Sustainability Consulting", "Creative Services"],
     channels: ["Social Media", "Events", "OOH"],
-    content: "Our campaign focused on promoting sustainable practices through engaging music and community involvement..."
+    content: "Our campaign focused on promoting sustainable practices through engaging music and community involvement...",
+    category: "Sustainability" // Added category
   },
   {
     id: "heineken",
@@ -98,7 +102,8 @@ export const projects: Project[] = [
     slug: "heineken-uefa-campaign",
     services: ["Event Marketing", "Brand Activation"],
     channels: ["Retail", "Social Media", "OOH"],
-    content: "Heineken's campaign aimed to enhance consumer engagement through strategic activations at key events..."
+    content: "Heineken's campaign aimed to enhance consumer engagement through strategic activations at key events...",
+    category: "Event Marketing" // Added category
   },
   {
     id: "mattel",
@@ -118,7 +123,8 @@ export const projects: Project[] = [
     slug: "mattel-back-to-school",
     services: ["Data Analytics", "Marketing Strategy"],
     channels: ["Digital", "Retail"],
-    content: "Our data strategy focused on understanding consumer behavior to enhance the back-to-school experience..."
+    content: "Our data strategy focused on understanding consumer behavior to enhance the back-to-school experience...",
+    category: "Back to School" // Added category
   },
   {
     id: "jetsmart",
@@ -138,7 +144,8 @@ export const projects: Project[] = [
     slug: "jetsmart-growth-strategy",
     services: ["Digital Marketing", "Customer Experience"],
     channels: ["Online", "Social Media"],
-    content: "JetSmart's campaign focused on enhancing customer experience through innovative digital solutions..."
+    content: "JetSmart's campaign focused on enhancing customer experience through innovative digital solutions...",
+    category: "Brand Growth" // Added category
   },
   {
     id: "maybelline",
@@ -158,7 +165,8 @@ export const projects: Project[] = [
     slug: "maybelline-launch",
     services: ["Influencer Marketing", "Social Media Strategy"],
     channels: ["Social Media", "Retail"],
-    content: "Maybelline's campaign aimed to create buzz around the new product launch through strategic influencer partnerships..."
+    content: "Maybelline's campaign aimed to create buzz around the new product launch through strategic influencer partnerships...",
+    category: "Product Launch" // Added category
   },
   {
     id: "uv-xp",
@@ -178,7 +186,8 @@ export const projects: Project[] = [
     slug: "uv-xp-transformation",
     services: ["Digital Transformation", "Customer Experience"],
     channels: ["Digital", "Social Media"],
-    content: "Our initiative focused on transforming traditional business models into entertainment-driven experiences..."
+    content: "Our initiative focused on transforming traditional business models into entertainment-driven experiences...",
+    category: "Digital Transformation" // Added category
   },
   {
     id: "coca-cola",
@@ -198,7 +207,8 @@ export const projects: Project[] = [
     slug: "coca-cola-social-media",
     services: ["Social Media Strategy", "Content Creation"],
     channels: ["Social Media", "Digital"],
-    content: "Coca-Cola's campaign focused on revitalizing its digital presence through engaging content and community interaction..."
+    content: "Coca-Cola's campaign focused on revitalizing its digital presence through engaging content and community interaction...",
+    category: "Social Media" // Added category
   },
   {
     id: "nike-run",
@@ -218,7 +228,8 @@ export const projects: Project[] = [
     slug: "nike-run-club",
     services: ["App Development", "Community Engagement"],
     channels: ["Digital", "Social Media"],
-    content: "Nike's initiative aimed to foster a community of runners through a dedicated digital platform..."
+    content: "Nike's initiative aimed to foster a community of runners through a dedicated digital platform...",
+    category: "Community Engagement" // Added category
   },
   {
     id: "spotify-wrapped",
@@ -238,7 +249,8 @@ export const projects: Project[] = [
     slug: "spotify-wrapped",
     services: ["Data Visualization", "User Experience"],
     channels: ["Digital", "Social Media"],
-    content: "Spotify's Wrapped campaign provided users with a personalized look at their listening habits, driving engagement and shares..."
+    content: "Spotify's Wrapped campaign provided users with a personalized look at their listening habits, driving engagement and shares...",
+    category: "Data Visualization" // Added category
   },
   {
     id: "airbnb-local",
@@ -258,6 +270,7 @@ export const projects: Project[] = [
     slug: "airbnb-local-experiences",
     services: ["Experience Design", "Community Engagement"],
     channels: ["Digital", "Social Media"],
-    content: "Airbnb's initiative focused on connecting travelers with local experiences, enhancing their travel journey..."
+    content: "Airbnb's initiative focused on connecting travelers with local experiences, enhancing their travel journey...",
+    category: "Local Experiences" // Added category
   }
 ];
