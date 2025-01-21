@@ -1,12 +1,35 @@
 import React from 'react';
-import { Project } from '@/data/projects';
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import { supabase } from '@/integrations/supabase/client';
 
 interface ProjectHeaderProps {
-  project: Project;
+  projectSlug: string;
 }
 
-const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
+const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectSlug }) => {
+  const { data: project, isLoading } = useQuery({
+    queryKey: ['project', projectSlug],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from('projects')
+        .select('*')
+        .eq('slug', projectSlug)
+        .single();
+      
+      if (error) throw error;
+      return data;
+    }
+  });
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!project) {
+    return <div>Project not found</div>;
+  }
+
   return (
     <div className="text-center mb-16">
       <Link to="/" className="inline-block mb-12 transition-transform duration-300 hover:scale-105">
@@ -26,8 +49,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
       </h1>
       
       <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-        Sopaipillas pasadas, made with Chancaca Deliciosa, are an icon of Chile's culinary tradition. 
-        Our main objective is to strengthen this bond between the brand and people, generating impact and recall.
+        {project.description}
       </p>
     </div>
   );

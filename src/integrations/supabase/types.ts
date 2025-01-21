@@ -9,7 +9,151 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      project_metrics: {
+        Row: {
+          channels: string[]
+          created_at: string
+          id: string
+          kpis: Json
+          project_id: string | null
+          services: string[]
+        }
+        Insert: {
+          channels?: string[]
+          created_at?: string
+          id?: string
+          kpis?: Json
+          project_id?: string | null
+          services?: string[]
+        }
+        Update: {
+          channels?: string[]
+          created_at?: string
+          id?: string
+          kpis?: Json
+          project_id?: string | null
+          services?: string[]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "project_metrics_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      project_results: {
+        Row: {
+          created_at: string
+          id: string
+          label: string
+          project_id: string | null
+          value: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          label: string
+          project_id?: string | null
+          value: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          label?: string
+          project_id?: string | null
+          value?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "project_results_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      projects: {
+        Row: {
+          category: Database["public"]["Enums"]["project_category"]
+          created_at: string
+          description: string
+          full_description: string[]
+          id: string
+          image: string
+          slug: string
+          subtitle: string | null
+          title: string
+          updated_at: string
+          video_url: string | null
+        }
+        Insert: {
+          category: Database["public"]["Enums"]["project_category"]
+          created_at?: string
+          description: string
+          full_description?: string[]
+          id?: string
+          image: string
+          slug: string
+          subtitle?: string | null
+          title: string
+          updated_at?: string
+          video_url?: string | null
+        }
+        Update: {
+          category?: Database["public"]["Enums"]["project_category"]
+          created_at?: string
+          description?: string
+          full_description?: string[]
+          id?: string
+          image?: string
+          slug?: string
+          subtitle?: string | null
+          title?: string
+          updated_at?: string
+          video_url?: string | null
+        }
+        Relationships: []
+      }
+      related_projects: {
+        Row: {
+          created_at: string
+          id: string
+          project_id: string | null
+          related_project_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          project_id?: string | null
+          related_project_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          project_id?: string | null
+          related_project_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "related_projects_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "related_projects_related_project_id_fkey"
+            columns: ["related_project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -18,7 +162,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      project_category: "BRANDING" | "CAMPAIGN" | "DIGITAL" | "SOCIAL"
     }
     CompositeTypes: {
       [_ in never]: never
