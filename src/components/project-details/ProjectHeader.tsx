@@ -16,7 +16,7 @@ const ProjectHeader = ({ project }: ProjectHeaderProps) => {
         <img 
           src="/lovable-uploads/3de03002-3246-4965-b7e8-9780a09a46af.png" 
           alt="UV.Agency Logo" 
-          className="h-12 w-auto"
+          className="h-32 w-auto transition-transform duration-300 hover:scale-105"
         />
       </Link>
       
