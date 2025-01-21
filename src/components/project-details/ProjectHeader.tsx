@@ -11,22 +11,13 @@ const ProjectHeader = ({ project }: ProjectHeaderProps) => {
     <div className="text-center mb-16">
       <Link 
         to="/" 
-        className="inline-flex items-center text-gray-600 mb-8 hover:text-gray-900 transition-colors"
+        className="inline-flex items-center mb-8 hover:opacity-80 transition-opacity"
       >
-        <svg 
-          className="w-4 h-4 mr-2" 
-          fill="none" 
-          stroke="currentColor" 
-          viewBox="0 0 24 24"
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth={2} 
-            d="M15 19l-7-7 7-7" 
-          />
-        </svg>
-        Back to projects
+        <img 
+          src="/lovable-uploads/3de03002-3246-4965-b7e8-9780a09a46af.png" 
+          alt="UV.Agency Logo" 
+          className="h-12 w-auto"
+        />
       </Link>
       
       <h1 className="text-4xl font-bold mb-6">
