@@ -8,6 +8,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/projects/:id" element={<ProjectDetails />} />
+        {/* Add a catch-all route that redirects to the index */}
+        <Route path="*" element={<Index />} />
       </Routes>
     </Router>
   );
