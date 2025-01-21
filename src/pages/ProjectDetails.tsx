@@ -1,39 +1,45 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { useParams } from 'react-router-dom';
+import { projects } from '../data/projects';
 
 const ProjectDetails = () => {
   const { id } = useParams();
   console.log("Project ID:", id);
+  
+  const project = projects.find(p => p.id === id);
+  
+  if (!project) {
+    return <div>Project not found</div>;
+  }
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <main className="container mx-auto px-4 py-20">
+      <main className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto">
           {/* Brand Name */}
           <div className="text-center mb-16">
             <span className="text-[#7FD1CC] text-sm uppercase tracking-wider mb-4 block">
-              CHANCACA DELICIOSA
+              {project.category}
             </span>
             
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Bridging Bonds with Sabor de Barrio: A CSR Success Story
+            <h1 className="text-3xl md:text-5xl font-bold mb-8">
+              {project.title}
             </h1>
             
             {/* Description */}
-            <p className="text-gray-600 text-lg mb-16">
-              Sopaipillas pasadas, made with Chancaca Deliciosa, are an icon of Chile's culinary tradition. Our 
-              main objective is to strengthen this bond between the brand and people, generating impact and recall.
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              {project.description}
             </p>
           </div>
 
           {/* Services and KPIs Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-sm">
             <div>
-              <h3 className="font-bold mb-4">Services</h3>
+              <h3 className="font-bold mb-3">Services</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>Creative services</li>
                 <li>Paid Media</li>
@@ -42,7 +48,7 @@ const ProjectDetails = () => {
             </div>
             
             <div>
-              <h3 className="font-bold mb-4">Channels</h3>
+              <h3 className="font-bold mb-3">Channels</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>Neighborhood, Community, OOH</li>
                 <li>Physical, BTL</li>
@@ -51,7 +57,7 @@ const ProjectDetails = () => {
             </div>
             
             <div>
-              <h3 className="font-bold mb-4">Highlighted KPI</h3>
+              <h3 className="font-bold mb-3">Highlighted KPI</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>+5MM</li>
                 <li>Digital Reach</li>
@@ -59,7 +65,7 @@ const ProjectDetails = () => {
             </div>
             
             <div>
-              <h3 className="font-bold mb-4">Highlighted KPI</h3>
+              <h3 className="font-bold mb-3">Highlighted KPI</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>+1.5MM</li>
                 <li>UGC REACH AT EVENT</li>
@@ -67,7 +73,7 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-          {/* Video Section */}
+          {/* Main Image/Video Section */}
           <div className="aspect-[1.47/1] w-full bg-black mb-12 rounded-lg overflow-hidden">
             <iframe
               width="100%"
@@ -81,7 +87,16 @@ const ProjectDetails = () => {
             ></iframe>
           </div>
 
-          {/* Campaign Results */}
+          {/* Campaign Banner Image */}
+          <div className="mb-16">
+            <img 
+              src="/work/deliciosa_banner.png" 
+              alt="Campaign Banner" 
+              className="w-full rounded-lg"
+            />
+          </div>
+
+          {/* Results Section */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-6">RESULTS</h2>
             <ul className="space-y-3 text-gray-600">
@@ -130,6 +145,30 @@ const ProjectDetails = () => {
               only connected the brand with people but also caused a positive impact and made 
               a lasting impression... with authentic "sabor de barrio"!
             </p>
+          </div>
+
+          {/* Related Projects Section */}
+          <div className="mt-20">
+            <h2 className="text-2xl font-bold mb-8">Curated works</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {projects.slice(0, 2).map((relatedProject) => (
+                <div key={relatedProject.id} className="group cursor-pointer">
+                  <div className="aspect-[1.47/1] mb-4 overflow-hidden rounded-lg">
+                    <img
+                      src={relatedProject.image}
+                      alt={relatedProject.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <span className="text-[#7FD1CC] text-sm uppercase tracking-wider mb-2 block">
+                    {relatedProject.category}
+                  </span>
+                  <h3 className="font-bold text-lg">
+                    {relatedProject.title}
+                  </h3>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </main>
