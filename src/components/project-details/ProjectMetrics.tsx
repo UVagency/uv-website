@@ -3,6 +3,11 @@ import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { useParams } from 'react-router-dom';
 
+interface KPI {
+  label: string;
+  value: string;
+}
+
 const ProjectMetrics = () => {
   const { id: projectSlug } = useParams();
   
@@ -11,7 +16,6 @@ const ProjectMetrics = () => {
     queryFn: async () => {
       console.log('Fetching metrics for project:', projectSlug);
       
-      // First get the project id
       const projectResponse = await supabase
         .from('projects')
         .select('id')
@@ -65,7 +69,7 @@ const ProjectMetrics = () => {
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-sm">
-      {metrics.services && metrics.services.length > 0 && (
+      {metrics.services && Array.isArray(metrics.services) && metrics.services.length > 0 && (
         <div>
           <h3 className="font-bold mb-3">Services</h3>
           <ul className="space-y-2 text-gray-600">
@@ -76,7 +80,7 @@ const ProjectMetrics = () => {
         </div>
       )}
       
-      {metrics.channels && metrics.channels.length > 0 && (
+      {metrics.channels && Array.isArray(metrics.channels) && metrics.channels.length > 0 && (
         <div>
           <h3 className="font-bold mb-3">Channels</h3>
           <ul className="space-y-2 text-gray-600">
@@ -87,7 +91,7 @@ const ProjectMetrics = () => {
         </div>
       )}
       
-      {metrics.kpis && Array.isArray(metrics.kpis) && metrics.kpis.map((kpi: any, index: number) => (
+      {metrics.kpis && Array.isArray(metrics.kpis) && metrics.kpis.map((kpi: KPI, index: number) => (
         <div key={index}>
           <h3 className="font-bold mb-3">Highlighted KPI</h3>
           <ul className="space-y-2 text-gray-600">
