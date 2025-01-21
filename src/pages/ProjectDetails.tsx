@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -14,6 +14,10 @@ const ProjectDetails = () => {
   const { id } = useParams();
   const project = useProject(id);
   
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   console.log('Current project ID:', id);
   console.log('Project data:', project);
 
