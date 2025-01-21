@@ -16,18 +16,18 @@ const Hero = () => {
   }, []);
 
   const clientLogos = [
-    { name: "Coca Cola", logo: "https://www.uv.agency/assets/images/clients/coca-cola.svg" },
-    { name: "Unilever", logo: "https://www.uv.agency/assets/images/clients/unilever.svg" },
-    { name: "Nestle", logo: "https://www.uv.agency/assets/images/clients/nestle.svg" },
-    { name: "Pepsico", logo: "https://www.uv.agency/assets/images/clients/pepsico.svg" },
-    { name: "Colun", logo: "https://www.uv.agency/assets/images/clients/colun.svg" },
-    { name: "Watts", logo: "https://www.uv.agency/assets/images/clients/watts.svg" },
-    { name: "Carozzi", logo: "https://www.uv.agency/assets/images/clients/carozzi.svg" },
-    { name: "Cencosud", logo: "https://www.uv.agency/assets/images/clients/cencosud.svg" },
-    { name: "Falabella", logo: "https://www.uv.agency/assets/images/clients/falabella.svg" },
-    { name: "Ripley", logo: "https://www.uv.agency/assets/images/clients/ripley.svg" },
-    { name: "Paris", logo: "https://www.uv.agency/assets/images/clients/paris.svg" },
-    { name: "Jumbo", logo: "https://www.uv.agency/assets/images/clients/jumbo.svg" }
+    { name: "Coca Cola", logo: "/client-logos/coca-cola.png" },
+    { name: "Unilever", logo: "/client-logos/unilever.png" },
+    { name: "Nestle", logo: "/client-logos/nestle.png" },
+    { name: "Pepsico", logo: "/client-logos/pepsico.png" },
+    { name: "Colun", logo: "/client-logos/colun.png" },
+    { name: "Watts", logo: "/client-logos/watts.png" },
+    { name: "Carozzi", logo: "/client-logos/carozzi.png" },
+    { name: "Cencosud", logo: "/client-logos/cencosud.png" },
+    { name: "Falabella", logo: "/client-logos/falabella.png" },
+    { name: "Ripley", logo: "/client-logos/ripley.png" },
+    { name: "Paris", logo: "/client-logos/paris.png" },
+    { name: "Jumbo", logo: "/client-logos/jumbo.png" }
   ];
 
   const plugin = Autoplay({ 
