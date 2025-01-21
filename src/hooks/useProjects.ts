@@ -11,7 +11,7 @@ export type Project = {
   kpi1Value: string;
   kpi2: string;
   kpi2Value: string;
-  videoLink: string;
+  videoLink?: string; // Made optional with ?
   videoUrl: string;
   image: string;
   date: string;
