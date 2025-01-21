@@ -16,7 +16,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       }}
     >
       {project.image && (
-        <div className="relative w-full aspect-[1.77] overflow-hidden">
+        <div className="relative w-full" style={{ aspectRatio: '1.47/1' }}>
           <img 
             src={project.image}
             alt={project.title}
