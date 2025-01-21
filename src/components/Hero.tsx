@@ -21,7 +21,7 @@ const Hero = () => {
     { name: "Edusoft", logo: "/client-logos/edusoft.svg" },
     { name: "Heineken", logo: "/client-logos/heineken.svg" },
     { name: "Igenix", logo: "/client-logos/igenix.svg" },
-    { name: "Little Caesars", logo: "/client-logos/littlecaesars.svg", className: "scale-150" },
+    { name: "Little Caesars", logo: "/client-logos/littlecaesars.svg", className: "scale-[1.75]" },
     { name: "Melecmetal", logo: "/client-logos/melecmetal.svg" },
     { name: "Pepsico", logo: "/client-logos/pepsico.svg" },
     { name: "Philips", logo: "/client-logos/philips.svg" },
