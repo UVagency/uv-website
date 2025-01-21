@@ -32,7 +32,7 @@ const ProjectDetails = () => {
             
             {/* Description */}
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              {project.description}
+              Sopaipillas pasadas, made with Chancaca Deliciosa, are an icon of Chile's culinary tradition. Our main objective is to strengthen this bond between the brand and people, generating impact and recall.
             </p>
           </div>
 
