@@ -20,7 +20,7 @@ const ProjectHeader = ({ project }: ProjectHeaderProps) => {
         />
       </Link>
       
-      <p className="text-lg font-semibold text-gray-600 mb-2">
+      <p className="text-lg font-semibold mb-2 style={{color: 'rgb(111,216, 215)'}}">
         {project.brand}
       </p>
       
