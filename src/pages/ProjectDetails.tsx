@@ -36,6 +36,20 @@ const ProjectDetails = () => {
             </p>
           </div>
 
+          {/* Main Image/Video Section */}
+          <div className="aspect-[1.47/1] w-full bg-black mb-12 rounded-lg overflow-hidden">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/yBkIRTwXNP4?autoplay=0&rel=0&modestbranding=1"
+              title="Sabor de Barrio Campaign"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+
           {/* Services and KPIs Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-sm">
             <div>
@@ -71,20 +85,6 @@ const ProjectDetails = () => {
                 <li>UGC REACH AT EVENT</li>
               </ul>
             </div>
-          </div>
-
-          {/* Main Image/Video Section */}
-          <div className="aspect-[1.47/1] w-full bg-black mb-12 rounded-lg overflow-hidden">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/yBkIRTwXNP4?autoplay=0&rel=0&modestbranding=1"
-              title="Sabor de Barrio Campaign"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
           </div>
 
           {/* Campaign Banner Image */}
