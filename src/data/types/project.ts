@@ -18,4 +18,5 @@ export interface Project {
   channels: string[];
   content: string;
   category: string;
+  results?: string[];  // Added this optional property
 }
