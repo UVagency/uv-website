@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 const RelatedProjects = () => {
   const projects = useProjects();
   
+  const handleProjectClick = () => {
+    window.scrollTo(0, 0);
+  };
+  
   return (
     <div className="mt-20">
       <h2 className="text-2xl font-bold mb-8">Curated works</h2>
@@ -14,6 +18,7 @@ const RelatedProjects = () => {
             to={`/projects/${relatedProject.id}`}
             key={relatedProject.id} 
             className="group cursor-pointer"
+            onClick={handleProjectClick}
           >
             <div className="aspect-[1.47/1] mb-4 overflow-hidden rounded-lg">
               <img
