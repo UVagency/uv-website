@@ -16,18 +16,16 @@ const Hero = () => {
   }, []);
 
   const clientLogos = [
-    { name: "Coca Cola", logo: "/client-logos/coca-cola.png" },
-    { name: "Unilever", logo: "/client-logos/unilever.png" },
-    { name: "Nestle", logo: "/client-logos/nestle.png" },
-    { name: "Pepsico", logo: "/client-logos/pepsico.png" },
-    { name: "Colun", logo: "/client-logos/colun.png" },
-    { name: "Watts", logo: "/client-logos/watts.png" },
-    { name: "Carozzi", logo: "/client-logos/carozzi.png" },
-    { name: "Cencosud", logo: "/client-logos/cencosud.png" },
-    { name: "Falabella", logo: "/client-logos/falabella.png" },
-    { name: "Ripley", logo: "/client-logos/ripley.png" },
-    { name: "Paris", logo: "/client-logos/paris.png" },
-    { name: "Jumbo", logo: "/client-logos/jumbo.png" }
+    { name: "Ball", logo: "/client-logos/ball.svg" },
+    { name: "Chancaca", logo: "/client-logos/chancaca.svg" },
+    { name: "Edusoft", logo: "/client-logos/edusoft.svg" },
+    { name: "Heineken", logo: "/client-logos/heineken.svg" },
+    { name: "Igenix", logo: "/client-logos/igenix.svg" },
+    { name: "Little Caesars", logo: "/client-logos/littlecaesars.svg" },
+    { name: "Melecmetal", logo: "/client-logos/melecmetal.svg" },
+    { name: "Pepsico", logo: "/client-logos/pepsico.svg" },
+    { name: "Philips", logo: "/client-logos/philips.svg" },
+    { name: "Royal Canin", logo: "/client-logos/royalcanin.svg" }
   ];
 
   const plugin = Autoplay({ 
