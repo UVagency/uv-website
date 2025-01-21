@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { projects } from '../data/projects';
 import ProjectHeader from '../components/project-details/ProjectHeader';
 import ProjectVideo from '../components/project-details/ProjectVideo';
 import ProjectMetrics from '../components/project-details/ProjectMetrics';
@@ -11,8 +12,11 @@ import RelatedProjects from '../components/project-details/RelatedProjects';
 
 const ProjectDetails = () => {
   const { id } = useParams();
+  console.log("Project ID:", id);
   
-  if (!id) {
+  const project = projects.find(p => p.id === id);
+  
+  if (!project) {
     return <div>Project not found</div>;
   }
 
@@ -22,7 +26,7 @@ const ProjectDetails = () => {
       
       <main className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto">
-          <ProjectHeader projectSlug={id} />
+          <ProjectHeader project={project} />
           <ProjectVideo />
           <ProjectMetrics />
           <ProjectResults />
