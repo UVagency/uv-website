@@ -80,7 +80,7 @@ const Hero = () => {
                       <img
                         src={client.logo}
                         alt={`${client.name} logo`}
-                        className="h-8 w-auto mx-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                        className="h-12 w-auto mx-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
                       />
                     </div>
                   </CarouselItem>
