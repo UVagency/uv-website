@@ -20,7 +20,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <img 
             src={project.image}
             alt={project.title}
-            className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+            style={{
+              display: 'block',
+              width: '100%',
+              height: '100%',
+              borderRadius: 'inherit',
+              objectPosition: 'center center',
+              objectFit: 'cover'
+            }}
             loading="lazy"
           />
         </div>
