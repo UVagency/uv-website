@@ -1,75 +1,79 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Card, CardContent } from "@/components/ui/card";
-import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
-
-const projectData = {
-  id: "sabor-de-barrio",
-  title: "Bridging Bonds with Sabor de Barrio: A CSR Success Story",
-  client: "Chancaca Deliciosa",
-  videoId: "yBkIRTwXNP4",
-  overview: "Sopaipillas pasadas, made with Chancaca Deliciosa, are an icon of Chile's culinary tradition. Our main objective is to strengthen this bond between the brand and people, generating impact and recall.",
-  strategy: [
-    "Collaborated with local municipality for best recipe contest",
-    "Organized contest won by Mrs. Angélica",
-    "Refurbished neighborhood community center",
-    "Brand representatives participated in renovation",
-    "Amplified through press and digital media",
-    "Celebrated with carnival on Sopaipilla Pasada Day"
-  ],
-  services: [
-    "Creative services",
-    "Paid Media",
-    "Programmatic",
-    "Content",
-    "Influencers",
-    "Growth Marketing"
-  ],
-  channels: [
-    "Neighborhood and Community Engagement",
-    "Out-of-Home (OOH) Advertising",
-    "Phygital (Physical + Digital) Strategies",
-    "Below-the-Line (BTL) Marketing",
-    "YouTube",
-    "Instagram",
-    "Facebook"
-  ],
-  kpis: [
-    "Over 2,000 families benefited",
-    "115 mentions in traditional media",
-    "$70,000 in earned media value",
-    "Over 5,000,000 digital reach",
-    "78% digital coverage",
-    "Over 1,000 attendees at the event",
-    "1.5 million reach through UGC at the event"
-  ]
-};
+import { useParams } from 'react-router-dom';
 
 const ProjectDetails = () => {
   const { id } = useParams();
   console.log("Project ID:", id);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Navigation />
       
       <main className="container mx-auto px-4 py-20">
-        <Link to="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8">
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Projects
-        </Link>
-
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6">{projectData.title}</h1>
-          <p className="text-xl text-gray-600 mb-8">{projectData.client}</p>
+          {/* Brand Name */}
+          <div className="text-center mb-16">
+            <span className="text-[#7FD1CC] text-sm uppercase tracking-wider mb-4 block">
+              CHANCACA DELICIOSA
+            </span>
+            
+            {/* Title */}
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Bridging Bonds with Sabor de Barrio: A CSR Success Story
+            </h1>
+            
+            {/* Description */}
+            <p className="text-gray-600 text-lg mb-16">
+              Sopaipillas pasadas, made with Chancaca Deliciosa, are an icon of Chile's culinary tradition. Our 
+              main objective is to strengthen this bond between the brand and people, generating impact and recall.
+            </p>
+          </div>
 
-          <div className="w-full aspect-video mb-12 rounded-lg overflow-hidden">
+          {/* Services and KPIs Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            <div>
+              <h3 className="font-bold mb-4">Services</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Creative services</li>
+                <li>Paid Media</li>
+                <li>Content, Influencers y Growth Marketing</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="font-bold mb-4">Channels</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Neighborhood, Community, OOH</li>
+                <li>Physical, BTL</li>
+                <li>YouTube, Instagram, Facebook</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="font-bold mb-4">Highlighted KPI</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>+5MM</li>
+                <li>Digital Reach</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="font-bold mb-4">Highlighted KPI</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>+1.5MM</li>
+                <li>UGC REACH AT EVENT</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Video Section */}
+          <div className="aspect-[1.47/1] w-full bg-black mb-12 rounded-lg overflow-hidden">
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${projectData.videoId}?autoplay=1&rel=0&modestbranding=1`}
-              title={projectData.title}
+              src="https://www.youtube.com/embed/yBkIRTwXNP4?autoplay=0&rel=0&modestbranding=1"
+              title="Sabor de Barrio Campaign"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -77,59 +81,55 @@ const ProjectDetails = () => {
             ></iframe>
           </div>
 
-          <div className="grid gap-8">
-            <Card>
-              <CardContent className="p-6">
-                <h2 className="text-2xl font-semibold mb-4">Campaign Overview</h2>
-                <p className="text-gray-700">{projectData.overview}</p>
-              </CardContent>
-            </Card>
+          {/* Campaign Results */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold mb-6">RESULTS</h2>
+            <ul className="space-y-3 text-gray-600">
+              <li>+2,000 FAMILIES BENEFITED</li>
+              <li>115 TRADITIONAL MEDIA MENTIONS</li>
+              <li>70K USD IN EARNED MEDIA VALUE</li>
+              <li>+5,000,000 DIGITAL REACH</li>
+              <li>+78% DIGITAL COVERAGE</li>
+              <li>+1,000 ATTENDEES AT EVENT</li>
+              <li>1.5M REACH WITH UGC AT EVENT</li>
+            </ul>
+          </div>
 
-            <Card>
-              <CardContent className="p-6">
-                <h2 className="text-2xl font-semibold mb-4">Strategy</h2>
-                <ul className="list-disc pl-6 space-y-2">
-                  {projectData.strategy.map((item, index) => (
-                    <li key={index} className="text-gray-700">{item}</li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-semibold mb-4">Services Provided</h2>
-                  <ul className="list-disc pl-6 space-y-2">
-                    {projectData.services.map((service, index) => (
-                      <li key={index} className="text-gray-700">{service}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-semibold mb-4">Channels Utilized</h2>
-                  <ul className="list-disc pl-6 space-y-2">
-                    {projectData.channels.map((channel, index) => (
-                      <li key={index} className="text-gray-700">{channel}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-
-            <Card>
-              <CardContent className="p-6">
-                <h2 className="text-2xl font-semibold mb-4">Key Performance Indicators</h2>
-                <ul className="list-disc pl-6 space-y-2">
-                  {projectData.kpis.map((kpi, index) => (
-                    <li key={index} className="text-gray-700">{kpi}</li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+          {/* Campaign Description */}
+          <div className="prose max-w-none text-gray-600 space-y-6">
+            <p>
+              We present a campaign with local taste, with "SABOR DE BARRIO"!
+            </p>
+            <p>
+              "Sopaipillas pasadas" made with Chancaca Deliciosa, are an icon of Chile's culinary 
+              tradition. Our main objective is to strengthen this bond between the brand and 
+              people, generating impact and recall.
+            </p>
+            <p>
+              To achieve this goal, we carried out a CSR action and outlined a comprehensive 
+              communication strategy with the neighborhood as the main ingredient. We went in 
+              search of the best "sopaipillas pasadas" preparation, together with the local 
+              Municipality. The first place in this contest was won by the skilled hands of Mrs. 
+              Angélica, and the prize was the refurbishment of her neighborhood's community 
+              center.
+            </p>
+            <p>
+              Representatives of the Chancaca Deliciosa brand actively participated in the 
+              renovation of this community center, directly benefiting over 2000 neighboring 
+              families.
+            </p>
+            <p>
+              We amplified this social action with a press strategy in various media outlets, and 
+              also executed an efficient plan of investment in digital media with high-impact 
+              content. And because sharing is caring... we celebrated the reopening of the 
+              community center with a vibrant carnival on Sopaipilla Pasada Day.
+            </p>
+            <p>
+              We had the presence of municipal authorities, and the entire community including in 
+              the neighborhood could enjoy activities and surprises. With this campaign, we not 
+              only connected the brand with people but also caused a positive impact and made 
+              a lasting impression... with authentic "sabor de barrio"!
+            </p>
           </div>
         </div>
       </main>
