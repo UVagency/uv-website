@@ -18,7 +18,15 @@ export const krispyKreme: Project = {
   slug: "krispy-kreme-launch",
   services: ["Brand Strategy", "Digital Marketing", "Influencer Management"],
   channels: ["Social Media", "OOH", "Retail"],
-  results: [""],
+  results: [
+    "+80% Coverage of target audience",
+    "+3MM Reach with UGC",
+    "115 Traditional media mentions",
+    "70K USD in earned media value",
+    "+5,000,000 Digital reach",
+    "+78% Digital coverage",
+    "+1,000 Attendees at event"
+  ],
   content: "Launching Krispy Kreme in Chile required a comprehensive strategy...",
   category: "Market Entry"
 };
