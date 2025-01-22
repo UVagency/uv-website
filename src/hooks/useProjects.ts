@@ -4,6 +4,11 @@ import ballCorporation from '../data/projects/ball-corporation.json';
 import heineken from '../data/projects/heineken.json';
 import mattel from '../data/projects/mattel.json';
 
+export type GalleryItem = {
+  type: 'image' | 'video';
+  url: string;
+};
+
 export type Project = {
   id: string;
   featured: boolean;
@@ -24,6 +29,7 @@ export type Project = {
   channels: string[];
   content: string;
   results?: string[];
+  gallery?: GalleryItem[];
 };
 
 const projects: Project[] = [

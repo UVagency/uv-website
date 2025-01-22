@@ -7,6 +7,7 @@ import ProjectVideo from '../components/project-details/ProjectVideo';
 import ProjectMetrics from '../components/project-details/ProjectMetrics';
 import ProjectResults from '../components/project-details/ProjectResults';
 import ProjectDescription from '../components/project-details/ProjectDescription';
+import ProjectGallery from '../components/project-details/ProjectGallery';
 import RelatedProjects from '../components/project-details/RelatedProjects';
 import ScrollToTop from '../components/ScrollToTop';
 import { useProject } from '../hooks/useProjects';
@@ -37,6 +38,7 @@ const ProjectDetails = () => {
           <ProjectMetrics />
           <ProjectResults />
           <ProjectDescription />
+          <ProjectGallery project={project} />
           <RelatedProjects />
         </div>
       </main>
