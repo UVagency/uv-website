@@ -17,12 +17,19 @@
   "services": [
     "Creative services",
     "Paid Media",
-    "Content, Influencers y Growth Marketing"
+    "Programmatic",
+    "Content",
+    "Influencers y Growth Marketing"
   ],
   "channels": [
-    "Neighborhood, Community, OOH",
-    "Physical, BTL",
-    "YouTube, Instagram, Facebook"
+    "Neighborhood",
+    "Community",
+    "OOH",
+    "Phygital",
+    "BTL",
+    "YouTube",
+    "Instagram",
+    "Facebook"
   ],
   "results": [
     "+80% Coverage of target audience",
