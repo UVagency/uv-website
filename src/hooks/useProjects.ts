@@ -4,6 +4,7 @@ import ballCorporation from '../data/projects/ball-corporation.json';
 import heineken from '../data/projects/heineken.json';
 import mattel from '../data/projects/mattel.json';
 import maybelline from '../data/projects/maybelline.json';
+import jetsmart from '../data/projects/jetsmart.json';
 
 export type GalleryItem = {
   type: 'image' | 'video';
@@ -39,7 +40,8 @@ const projects: Project[] = [
   ballCorporation,
   heineken,
   mattel,
-  maybelline
+  maybelline,
+  jetsmart
 ];
 
 export const useProjects = (): Project[] => {
