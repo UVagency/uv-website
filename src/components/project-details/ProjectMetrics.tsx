@@ -12,24 +12,25 @@ const ProjectMetrics = () => {
     return null;
   }
 
+  const formatList = (items: string[]) => {
+    if (items.length === 0) return '';
+    if (items.length === 1) return items[0];
+    
+    const lastItem = items[items.length - 1];
+    const otherItems = items.slice(0, -1);
+    return `${otherItems.join(', ')} and ${lastItem}`;
+  };
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-sm">
-      <div>
+      <div className="col-span-2">
         <h3 className="font-bold mb-3">Services</h3>
-        <ul className="space-y-2 text-gray-600">
-          {project.services.map((service, index) => (
-            <li key={index}>{service}</li>
-          ))}
-        </ul>
+        <p className="text-gray-600">{formatList(project.services)}</p>
       </div>
       
-      <div>
+      <div className="col-span-2">
         <h3 className="font-bold mb-3">Channels</h3>
-        <ul className="space-y-2 text-gray-600">
-          {project.channels.map((channel, index) => (
-            <li key={index}>{channel}</li>
-          ))}
-        </ul>
+        <p className="text-gray-600">{formatList(project.channels)}</p>
       </div>
       
       <div>
