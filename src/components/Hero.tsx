@@ -52,7 +52,7 @@ const Hero = () => {
           </p>
           <a 
             href="#work"
-            className="inline-block bg-white text-[#1A1F2C] px-8 py-4 rounded-[100px] hover:bg-gray-100 transition-colors text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+            className="inline-block bg-white text-[#1A1F2C] px-8 py-4 rounded-[100px] hover:bg-custom-teal hover:text-white transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             Curated work
           </a>
