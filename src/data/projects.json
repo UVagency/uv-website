@@ -13,7 +13,7 @@
       "$import": "./projects/heineken.json"
     },
     {
-      "$import": "./projects/mattel-back-to-school.json"
+      "$import": "./projects/mattel.json"
     }
   ]
 }
