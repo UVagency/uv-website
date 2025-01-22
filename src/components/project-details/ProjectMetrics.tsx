@@ -23,14 +23,14 @@ const ProjectMetrics = () => {
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-sm">
-      <div className="col-span-2">
+      <div>
         <h3 className="font-bold mb-3">Services</h3>
-        <p className="text-gray-600">{formatList(project.services)}</p>
+        <p className="text-gray-600 max-w-[280px]">{formatList(project.services)}</p>
       </div>
       
-      <div className="col-span-2">
+      <div>
         <h3 className="font-bold mb-3">Channels</h3>
-        <p className="text-gray-600">{formatList(project.channels)}</p>
+        <p className="text-gray-600 max-w-[280px]">{formatList(project.channels)}</p>
       </div>
       
       <div>
