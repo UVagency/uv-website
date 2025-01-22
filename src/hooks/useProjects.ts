@@ -2,6 +2,7 @@ import chancacaDeliciosa from '../data/projects/chancaca-deliciosa.json';
 import krispyKreme from '../data/projects/krispy-kreme.json';
 import ballCorporation from '../data/projects/ball-corporation.json';
 import heineken from '../data/projects/heineken.json';
+import mattelBackToSchool from '../data/projects/mattel-back-to-school.json';
 
 export type Project = {
   id: string;
@@ -29,7 +30,8 @@ const projects: Project[] = [
   chancacaDeliciosa,
   krispyKreme,
   ballCorporation,
-  heineken
+  heineken,
+  mattelBackToSchool
 ];
 
 export const useProjects = (): Project[] => {

@@ -1,0 +1,40 @@
+{
+  "id": "mattel-back-to-school",
+  "featured": true,
+  "brand": "Mattel",
+  "accent": "#FF69B4",
+  "title": "Back to School Campaign",
+  "shortDescription": "A data-driven campaign that leveraged consumer insights to boost back-to-school sales for Barbie and Hot Wheels brands.",
+  "kpi1": "People reached",
+  "kpi1Value": "900.000+",
+  "kpi2": "New subscribers",
+  "kpi2Value": "22.000+",
+  "videoUrl": "https://www.youtube.com/watch?v=5Bth1e6uHn0",
+  "image": "/lovable-uploads/38925f1f-f58e-48dd-8f58-ade2629ecc57.png",
+  "date": "2023",
+  "slug": "mattel-back-to-school",
+  "category": "Data Strategy",
+  "services": [
+    "Creative services",
+    "Paid Media",
+    "Trade",
+    "Promo",
+    "Content",
+    "Growth Marketing"
+  ],
+  "channels": [
+    "TV (air and cable)",
+    "POS",
+    "Facebook",
+    "Instagram",
+    "Youtube",
+    "Landing page"
+  ],
+  "content": "## Challenge\n\nCreate a data-driven back-to-school campaign that would increase Mattel's market share and drive sales during this crucial retail period. The campaign needed to effectively target both parents and children while maintaining brand consistency across all channels.\n\n## Execution\n\nWe developed a comprehensive data strategy that combined consumer insights with targeted marketing initiatives. Our approach included:\n\nThe campaign utilized advanced data analytics to identify key purchasing patterns during the back-to-school season. This informed our marketing strategy across multiple channels, including social media, retail partnerships, and digital advertising.\n\nWe implemented personalized marketing campaigns based on regional data, ensuring that each message resonated with local audiences and their specific needs during the back-to-school period.",
+  "results": [
+    "+45% increase in sales during campaign period",
+    "2.5M social media impressions",
+    "85% positive sentiment in campaign feedback",
+    "30% increase in market share during back-to-school season"
+  ]
+}

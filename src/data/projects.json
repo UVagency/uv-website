@@ -11,6 +11,9 @@
     },
     {
       "$import": "./projects/heineken.json"
+    },
+    {
+      "$import": "./projects/mattel-back-to-school.json"
     }
   ]
 }
