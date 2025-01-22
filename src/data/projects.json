@@ -17,6 +17,9 @@
     },
     {
       "$import": "./projects/maybelline.json"
+    },
+    {
+      "$import": "./projects/jetsmart.json"
     }
   ]
 }
