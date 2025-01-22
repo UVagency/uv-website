@@ -8,6 +8,7 @@ import ProjectMetrics from '../components/project-details/ProjectMetrics';
 import ProjectResults from '../components/project-details/ProjectResults';
 import ProjectDescription from '../components/project-details/ProjectDescription';
 import RelatedProjects from '../components/project-details/RelatedProjects';
+import ScrollToTop from '../components/ScrollToTop';
 import { useProject } from '../hooks/useProjects';
 
 const ProjectDetails = () => {
@@ -41,6 +42,7 @@ const ProjectDetails = () => {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
