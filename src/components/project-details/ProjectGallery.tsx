@@ -19,7 +19,7 @@ const ProjectGallery = ({ project }: ProjectGalleryProps) => {
             {item.type === 'video' ? (
               <div className="aspect-video">
                 <iframe
-                  src={`${item.url}?autoplay=1&controls=1&rel=0`}
+                  src={`${item.url}?controls=1&rel=0`}
                   className="w-full h-full rounded-lg"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
