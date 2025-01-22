@@ -35,5 +35,11 @@
     "More than 80,000 interactions on the total of posts",
     "More than 300,000 reproductions on the total of the videos",
     "More than 100,000 visits to the campaign's landing page"
+  ],
+  "gallery": [
+    {
+      "type": "image",
+      "url": "/work/maybelline_profile.png"
+    }
   ]
 }
