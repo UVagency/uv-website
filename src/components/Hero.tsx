@@ -15,6 +15,14 @@ const Hero = () => {
     setMounted(true);
   }, []);
 
+  const handleScrollToWork = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const workSection = document.querySelector('#work');
+    if (workSection) {
+      workSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const clientLogos = [
     { name: "Ball", logo: "/client-logos/ball.svg" },
     { name: "Chancaca", logo: "/client-logos/chancaca.svg" },
@@ -52,6 +60,7 @@ const Hero = () => {
           </p>
           <a 
             href="#work"
+            onClick={handleScrollToWork}
             className="inline-block bg-white text-[#1A1F2C] px-8 py-4 rounded-[100px] hover:bg-custom-teal hover:text-white transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             Curated work
