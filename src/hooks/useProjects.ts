@@ -1,4 +1,7 @@
-import projectsData from '../data/projects.json';
+import chancacaDeliciosa from '../data/projects/chancaca-deliciosa.json';
+import krispyKreme from '../data/projects/krispy-kreme.json';
+import ballCorporation from '../data/projects/ball-corporation.json';
+import heineken from '../data/projects/heineken.json';
 
 export type Project = {
   id: string;
@@ -11,23 +14,29 @@ export type Project = {
   kpi1Value: string;
   kpi2: string;
   kpi2Value: string;
-  videoLink?: string; // Made optional with ?
   videoUrl: string;
   image: string;
   date: string;
   slug: string;
+  category: string;
   services: string[];
   channels: string[];
   content: string;
-  category: string;
   results?: string[];
 };
 
+const projects: Project[] = [
+  chancacaDeliciosa,
+  krispyKreme,
+  ballCorporation,
+  heineken
+];
+
 export const useProjects = (): Project[] => {
-  return projectsData.projects;
+  return projects;
 };
 
 export const useProject = (id: string | undefined): Project | undefined => {
   if (!id) return undefined;
-  return projectsData.projects.find(project => project.id === id);
+  return projects.find(project => project.id === id);
 };
