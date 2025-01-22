@@ -3,6 +3,7 @@ import krispyKreme from '../data/projects/krispy-kreme.json';
 import ballCorporation from '../data/projects/ball-corporation.json';
 import heineken from '../data/projects/heineken.json';
 import mattel from '../data/projects/mattel.json';
+import maybelline from '../data/projects/maybelline.json';
 
 export type GalleryItem = {
   type: 'image' | 'video';
@@ -37,7 +38,8 @@ const projects: Project[] = [
   krispyKreme,
   ballCorporation,
   heineken,
-  mattel
+  mattel,
+  maybelline
 ];
 
 export const useProjects = (): Project[] => {

@@ -14,6 +14,9 @@
     },
     {
       "$import": "./projects/mattel.json"
+    },
+    {
+      "$import": "./projects/maybelline.json"
     }
   ]
 }
