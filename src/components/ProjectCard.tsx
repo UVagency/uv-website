@@ -34,7 +34,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       )}
       <div className="p-8">
         <span className="text-[#7FD1CC] text-sm font-bold mb-2 block uppercase tracking-wider">
-          {project.category}
+          {project.brand}
         </span>
         <h3 className="text-2xl font-bold mb-3 text-gray-900">
           {project.title}
