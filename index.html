@@ -17,10 +17,23 @@
       gtag('js', new Date());
       gtag('config', 'G-897Z8QKYNP');
     </script>
-    <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
-    o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
-    o.onload=function(){window.trackingFunctions.onLoad({appId:"663d43ae4d562101c795b683"})},
-    document.head.appendChild(o)}initApollo();</script>
+    <script>
+      // Only run Apollo in production environment
+      if (!window.location.hostname.includes('lovableproject.com')) {
+        function initApollo(){
+          var n=Math.random().toString(36).substring(7),
+          o=document.createElement("script");
+          o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,
+          o.async=!0,
+          o.defer=!0,
+          o.onload=function(){
+            window.trackingFunctions.onLoad({appId:"663d43ae4d562101c795b683"})
+          },
+          document.head.appendChild(o)
+        }
+        initApollo();
+      }
+    </script>
   </head>
 
   <body>
