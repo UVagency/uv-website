@@ -1,6 +1,9 @@
 {
   "projects": [
     {
+      "$import": "./projects/loreal-uv-defender.json"
+    },
+    {
       "$import": "./projects/chancaca-deliciosa.json"
     },
     {

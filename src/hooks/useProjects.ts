@@ -1,3 +1,4 @@
+import lorealUvDefender from '../data/projects/loreal-uv-defender.json';
 import chancacaDeliciosa from '../data/projects/chancaca-deliciosa.json';
 import krispyKreme from '../data/projects/krispy-kreme.json';
 import ballCorporation from '../data/projects/ball-corporation.json';
@@ -35,6 +36,7 @@ export type Project = {
 };
 
 const projects: Project[] = [
+  lorealUvDefender,
   chancacaDeliciosa,
   krispyKreme,
   ballCorporation,
