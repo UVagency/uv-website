@@ -18,7 +18,7 @@ const ProjectGallery = ({ project }: ProjectGalleryProps) => {
         {project.gallery.map((item, index) => (
           <div key={index} className="w-full">
             {item.type === 'video' ? (
-              <AspectRatio ratio={16 / 9}>
+              <AspectRatio ratio={9 / 16}>
                 <video
                   src={item.url}
                   controls
@@ -30,7 +30,7 @@ const ProjectGallery = ({ project }: ProjectGalleryProps) => {
                 />
               </AspectRatio>
             ) : (
-              <AspectRatio ratio={16 / 9}>
+              <AspectRatio ratio={9 / 16}>
                 <img
                   src={item.url}
                   alt={`Gallery item ${index + 1}`}
