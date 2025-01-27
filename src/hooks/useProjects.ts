@@ -44,13 +44,20 @@ const projects: Project[] = [
   mattel,
   maybelline,
   jetsmart
-];
+].map(project => ({
+  ...project,
+  videoUrl: project.videoUrl?.replace(/:\/$/, '') // Remove trailing colon and slash if present
+}));
 
 export const useProjects = (): Project[] => {
+  console.log('Fetching all projects:', projects);
   return projects;
 };
 
 export const useProject = (id: string | undefined): Project | undefined => {
+  console.log('Fetching project with id:', id);
   if (!id) return undefined;
-  return projects.find(project => project.id === id);
+  const project = projects.find(project => project.id === id);
+  console.log('Found project:', project);
+  return project;
 };
