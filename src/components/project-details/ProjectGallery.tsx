@@ -16,12 +16,11 @@ const ProjectGallery = ({ project }: ProjectGalleryProps) => {
       <h2 className="text-2xl font-bold mb-8">Gallery</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {project.gallery.map((item, index) => (
-          <div key={index} className="w-full">
+          <div key={index} className="w-[75%] mx-auto">
             {item.type === 'video' ? (
               <AspectRatio ratio={9 / 16}>
                 <video
                   src={item.url}
-                  controls
                   autoPlay
                   muted
                   loop
