@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Project } from '../../hooks/useProjects';
+import { AspectRatio } from '../ui/aspect-ratio';
 
 interface ProjectGalleryProps {
   project: Project;
@@ -17,20 +18,25 @@ const ProjectGallery = ({ project }: ProjectGalleryProps) => {
         {project.gallery.map((item, index) => (
           <div key={index} className="w-full">
             {item.type === 'video' ? (
-              <div className="aspect-video">
+              <AspectRatio ratio={16 / 9}>
                 <video
                   src={item.url}
                   controls
-                  className="w-full h-full rounded-lg object-cover"
+                  autoPlay
+                  muted
+                  loop
                   playsInline
+                  className="w-full h-full rounded-lg object-cover"
                 />
-              </div>
+              </AspectRatio>
             ) : (
-              <img
-                src={item.url}
-                alt={`Gallery item ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg"
-              />
+              <AspectRatio ratio={16 / 9}>
+                <img
+                  src={item.url}
+                  alt={`Gallery item ${index + 1}`}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </AspectRatio>
             )}
           </div>
         ))}
