@@ -143,38 +143,6 @@ const Navigation = () => {
           </nav>
         </div>
       </div>
-
-      {/* Indicator dots for desktop */}
-      {!isMobile && !isOpen && location.pathname === '/' && (
-        <div className="fixed right-6 top-1/2 -translate-y-1/2 z-30 hidden md:block">
-          <div className="flex flex-col space-y-4">
-            <Button 
-              variant="outline" 
-              size="icon" 
-              className={`rounded-full w-3 h-3 p-0 ${
-                activeSection === 'home' ? 'bg-primary border-primary' : 'bg-white/50 border-white/50'
-              }`}
-              onClick={() => scrollToSection('home')}
-            />
-            <Button 
-              variant="outline" 
-              size="icon" 
-              className={`rounded-full w-3 h-3 p-0 ${
-                activeSection === 'work' ? 'bg-primary border-primary' : 'bg-white/50 border-white/50'
-              }`}
-              onClick={() => scrollToSection('work')}
-            />
-            <Button 
-              variant="outline" 
-              size="icon" 
-              className={`rounded-full w-3 h-3 p-0 ${
-                activeSection === 'contact' ? 'bg-primary border-primary' : 'bg-white/50 border-white/50'
-              }`}
-              onClick={() => scrollToSection('contact')}
-            />
-          </div>
-        </div>
-      )}
     </>
   );
 };
