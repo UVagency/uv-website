@@ -1,20 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
-import { Button } from './ui/button';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const isMobile = useIsMobile();
   const location = useLocation();
 
   // Check if we're on the culture page
   const isCulturePage = location.pathname === '/culture';
-
-  const toggleMenu = () => setIsOpen(!isOpen);
 
   const scrollToSection = (id: string) => {
     // If we're on the home page, scroll to the section
@@ -28,7 +23,6 @@ const Navigation = () => {
       }
       setActiveSection(id);
     }
-    setIsOpen(false);
   };
 
   // Update active section based on scroll position
@@ -61,37 +55,19 @@ const Navigation = () => {
   }, [location.pathname]);
 
   return (
-    <>
-      {/* Toggle Button */}
-      <div className="fixed top-6 right-6 z-50">
-        <Button 
-          variant="outline" 
-          size="icon" 
-          onClick={toggleMenu}
-          className="rounded-full bg-white/80 backdrop-blur-sm border-none shadow-md hover:bg-white"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </Button>
-      </div>
-
-      {/* Navigation Menu */}
-      <div 
-        className={`fixed inset-0 bg-black/90 backdrop-blur-sm z-40 transition-all duration-300 ${
-          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
-      >
-        <div className="flex flex-col justify-center items-center h-full">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+      <div className="container mx-auto px-6">
+        <div className="flex justify-between items-center h-16">
+          <Link to="/" className="font-bold text-xl">UV Agency</Link>
+          
           <nav>
-            <ul className="space-y-6 text-center">
+            <ul className="flex space-x-6">
               <li>
                 <Link 
                   to="/"
-                  onClick={() => {
-                    scrollToSection('home');
-                    setIsOpen(false);
-                  }}
-                  className={`text-3xl font-bold transition-colors hover:text-primary ${
-                    activeSection === 'home' && location.pathname === '/' ? 'text-primary' : 'text-white'
+                  onClick={() => scrollToSection('home')}
+                  className={`font-medium transition-colors hover:text-primary ${
+                    activeSection === 'home' && location.pathname === '/' ? 'text-primary' : 'text-gray-600'
                   }`}
                 >
                   Home
@@ -100,12 +76,9 @@ const Navigation = () => {
               <li>
                 <Link 
                   to="/"
-                  onClick={() => {
-                    scrollToSection('work');
-                    setIsOpen(false);
-                  }}
-                  className={`text-3xl font-bold transition-colors hover:text-primary ${
-                    activeSection === 'work' && location.pathname === '/' ? 'text-primary' : 'text-white'
+                  onClick={() => scrollToSection('work')}
+                  className={`font-medium transition-colors hover:text-primary ${
+                    activeSection === 'work' && location.pathname === '/' ? 'text-primary' : 'text-gray-600'
                   }`}
                 >
                   Projects
@@ -116,9 +89,8 @@ const Navigation = () => {
                 <li>
                   <Link 
                     to="/culture"
-                    onClick={() => setIsOpen(false)}
-                    className={`text-3xl font-bold transition-colors hover:text-primary ${
-                      location.pathname === '/culture' ? 'text-primary' : 'text-white'
+                    className={`font-medium transition-colors hover:text-primary ${
+                      location.pathname === '/culture' ? 'text-primary' : 'text-gray-600'
                     }`}
                   >
                     Culture
@@ -128,12 +100,9 @@ const Navigation = () => {
               <li>
                 <Link 
                   to="/"
-                  onClick={() => {
-                    scrollToSection('contact');
-                    setIsOpen(false);
-                  }}
-                  className={`text-3xl font-bold transition-colors hover:text-primary ${
-                    activeSection === 'contact' && location.pathname === '/' ? 'text-primary' : 'text-white'
+                  onClick={() => scrollToSection('contact')}
+                  className={`font-medium transition-colors hover:text-primary ${
+                    activeSection === 'contact' && location.pathname === '/' ? 'text-primary' : 'text-gray-600'
                   }`}
                 >
                   Contact
@@ -143,7 +112,7 @@ const Navigation = () => {
           </nav>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
