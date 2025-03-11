@@ -3,28 +3,37 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from './ui/button';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const isMobile = useIsMobile();
+  const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 100,
-        behavior: 'smooth'
-      });
+    // If we're on the home page, scroll to the section
+    if (location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }
+      setActiveSection(id);
     }
     setIsOpen(false);
-    setActiveSection(id);
   };
 
   // Update active section based on scroll position
   useEffect(() => {
+    if (location.pathname !== '/') {
+      return; // Only track scroll on home page
+    }
+    
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       
@@ -46,7 +55,7 @@ const Navigation = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <>
@@ -72,34 +81,57 @@ const Navigation = () => {
           <nav>
             <ul className="space-y-6 text-center">
               <li>
-                <button 
-                  onClick={() => scrollToSection('home')}
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    scrollToSection('home');
+                    setIsOpen(false);
+                  }}
                   className={`text-3xl font-bold transition-colors hover:text-primary ${
-                    activeSection === 'home' ? 'text-primary' : 'text-white'
+                    activeSection === 'home' && location.pathname === '/' ? 'text-primary' : 'text-white'
                   }`}
                 >
                   Home
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('work')}
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    scrollToSection('work');
+                    setIsOpen(false);
+                  }}
                   className={`text-3xl font-bold transition-colors hover:text-primary ${
-                    activeSection === 'work' ? 'text-primary' : 'text-white'
+                    activeSection === 'work' && location.pathname === '/' ? 'text-primary' : 'text-white'
                   }`}
                 >
                   Projects
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('contact')}
+                <Link 
+                  to="/culture"
+                  onClick={() => setIsOpen(false)}
                   className={`text-3xl font-bold transition-colors hover:text-primary ${
-                    activeSection === 'contact' ? 'text-primary' : 'text-white'
+                    location.pathname === '/culture' ? 'text-primary' : 'text-white'
+                  }`}
+                >
+                  Culture
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    scrollToSection('contact');
+                    setIsOpen(false);
+                  }}
+                  className={`text-3xl font-bold transition-colors hover:text-primary ${
+                    activeSection === 'contact' && location.pathname === '/' ? 'text-primary' : 'text-white'
                   }`}
                 >
                   Contact
-                </button>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -107,7 +139,7 @@ const Navigation = () => {
       </div>
 
       {/* Indicator dots for desktop */}
-      {!isMobile && !isOpen && (
+      {!isMobile && !isOpen && location.pathname === '/' && (
         <div className="fixed right-6 top-1/2 -translate-y-1/2 z-30 hidden md:block">
           <div className="flex flex-col space-y-4">
             <Button 
