@@ -1,3 +1,4 @@
+
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import Work from '../components/Work';
@@ -9,9 +10,19 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
-      <Work />
-      <Footer />
+      
+      <section id="home" className="min-h-screen">
+        <Hero />
+      </section>
+      
+      <section id="work" className="min-h-screen">
+        <Work />
+      </section>
+      
+      <section id="contact">
+        <Footer />
+      </section>
+      
       <ScrollToTop />
     </div>
   );
