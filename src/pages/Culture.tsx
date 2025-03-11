@@ -1,14 +1,10 @@
-
 import React from 'react';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
 const Culture = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      
       <section id="culture" className="min-h-screen pt-20">
         <div className="container mx-auto px-6 py-20">
           <div className="max-w-6xl mx-auto">

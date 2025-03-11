@@ -1,6 +1,6 @@
+
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ProjectHeader from '../components/project-details/ProjectHeader';
 import ProjectVideo from '../components/project-details/ProjectVideo';
@@ -29,8 +29,6 @@ const ProjectDetails = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-      
       <main className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto">
           <ProjectHeader project={project} />
