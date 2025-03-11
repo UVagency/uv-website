@@ -11,6 +11,9 @@ const Navigation = () => {
   const isMobile = useIsMobile();
   const location = useLocation();
 
+  // Check if we're on the culture page
+  const isCulturePage = location.pathname === '/culture';
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const scrollToSection = (id: string) => {
@@ -108,17 +111,20 @@ const Navigation = () => {
                   Projects
                 </Link>
               </li>
-              <li>
-                <Link 
-                  to="/culture"
-                  onClick={() => setIsOpen(false)}
-                  className={`text-3xl font-bold transition-colors hover:text-primary ${
-                    location.pathname === '/culture' ? 'text-primary' : 'text-white'
-                  }`}
-                >
-                  Culture
-                </Link>
-              </li>
+              {/* Only show the Culture link if we're already on the Culture page */}
+              {isCulturePage && (
+                <li>
+                  <Link 
+                    to="/culture"
+                    onClick={() => setIsOpen(false)}
+                    className={`text-3xl font-bold transition-colors hover:text-primary ${
+                      location.pathname === '/culture' ? 'text-primary' : 'text-white'
+                    }`}
+                  >
+                    Culture
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link 
                   to="/"
